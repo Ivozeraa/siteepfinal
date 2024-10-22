@@ -1,0 +1,20 @@
+:root {
+    --tom-verde: #006b09;
+    --tom-laranja: #ff6600;
+}
+
+footer{
+    background-color: #006b09;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+Footer a{
+    color: rgb(255, 255, 255);
+}
+
+Footer a:hover{
+    color: var(--tom-laranja);
+    scale: 1.2;
+}

@@ -1,0 +1,120 @@
+:root {
+    --tom-verde: #006b09;
+    --tom-laranja: #ff6600;
+}
+
+.imgPrincipal {
+    background-image: linear-gradient(to bottom, transparent 0%, var(--tom-verde) 80%), 
+                      url("imagemPrincipal.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--tom-verde);
+    border-bottom: double 10px var(--tom-laranja);
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    position: relative; /* Para o posicionamento correto da lista */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    margin-right: 30px;
+    padding: 4px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.login {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px var(--tom-laranja);
+    color: #ff6600;
+    border-radius: 15px;
+    height: 30px;
+}
+
+.login:hover {
+    background-color: var(--tom-laranja);
+    transition: ease-in-out 70ms;
+    color: rgb(255, 255, 255);
+    scale: 1.1;
+}
+
+header nav a p {
+    padding: 0 5px;
+}
+
+.option:hover {
+    color: var(--tom-laranja);
+    transition: ease-in-out 70ms;
+    scale: 1.1;
+}
+
+nav ul {
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    left: -140px;
+    width: 170px;
+    background-color: var(--tom-verde);
+    z-index: 1000;
+    border: 2px double var(--tom-laranja);
+    border-radius: 10px;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out; /* Transição suave */
+}
+
+nav ul li {
+    padding: 10px 0px 10px 0;
+    color: white;
+    text-align: left;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a:hover{
+    color: var(--tom-laranja);
+    transition: ease-in-out 70ms;
+    
+}
+
+/* Classe que mostra a lista com a animação */
+
+.showList {
+    display: block;
+    max-height: 300px; /* Define a altura máxima quando visível */
+    opacity: 1; /* Torna o menu visível */
+}

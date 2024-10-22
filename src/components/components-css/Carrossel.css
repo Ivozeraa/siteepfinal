@@ -1,0 +1,26 @@
+.carrossel-container {
+  margin: 0;
+  padding: 0%;
+}
+
+.slick-slide {
+  text-align: center;
+  color: #fff;
+  background: #333;
+  height: 200px; 
+  line-height: 200px;
+  font-size: 30px; 
+}
+
+.slick-dots li{
+  position: absolute;
+}
+
+.slick-dots li button:active::before, .slick-dots li.slick-active button::before {
+  color: var(--tom-verde);
+  position: relative;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: var(--tom-verde); 
+}
