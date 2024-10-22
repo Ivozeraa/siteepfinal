@@ -2,9 +2,9 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './components-css/Carrossel.css';
+import '../Css/Carrossel.css';
 
-function Carrossel(props) {
+export function Carrossel(props) {
   const settings = {
     autoplay: true,   // Habilitar autoplay
     infinite: true,   // Habilitar loop infinito
@@ -33,5 +33,3 @@ function Carrossel(props) {
     </div>
   );
 }
-
-export default Carrossel;

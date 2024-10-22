@@ -1,12 +1,12 @@
 import React from 'react';
-import './components-css/Section.css'; // Importa o arquivo de estilo
+import styles from '../Css/Section.module.css'; // Importa o arquivo de estilo
 import Titulo from './Titulo';
-function Section (props)  {
+
+export function Section (props)  {
   return (
-    <div className='Section'>
+    <div className={styles.Section}>
       <Titulo/>
     </div>
   );
 };
 
-export default Section;

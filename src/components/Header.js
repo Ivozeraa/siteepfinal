@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import styles from "./components-css/Header.css"; 
+import styles from '../Css/Header.module.css' 
 
-function Header() {
+export function Header() {
     const [showList, setShowList] = useState(false); 
     
 const toggleList = () => {
@@ -48,4 +48,4 @@ const toggleList = () => {
     );
 }
 
-export default Header;
+

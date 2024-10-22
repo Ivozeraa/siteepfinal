@@ -4,8 +4,8 @@
 }
 
 .imgPrincipal {
-    background-image: linear-gradient(to bottom, transparent 0%, var(--tom-verde) 80%), 
-                      url("imagemPrincipal.jpg");
+    background-image: linear-gradient(to bottom, transparent 0%, var(--tom-verde) 80%);
+    background: url(imagemPrincipal.jpg);
     height: 200px;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Correção da biblioteca
-import styles from './components-css/Footer.css'; // Correto uso de CSS modules
+import styles from '../Css/Footer.module.css'; // Correto uso de CSS modules
 
-function Footer() {
+export function Footer() {
     return (
         <div className={styles.Footer}>
             <footer>
@@ -15,4 +15,3 @@ function Footer() {
     );
 }
 
-export default Footer;

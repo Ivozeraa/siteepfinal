@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Carrossel from './components/Carrossel';
-import Section from './components/Section';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Carrossel} from './components/Carrossel';
+import { Section } from './components/Section';
+import { Footer } from './components/Footer';
+import Imagem3 from './components/Imgs/WhatsApp Image 2024-10-22 at 13.38.15.jpeg';
 
-function App() {
+export function App() {
   return (
     <div className="App">
       <div className="imagemPrincipal">
+        {/* Você pode colocar a imagem principal aqui, se necessário */}
       </div>
       <Header />
-      <Carrossel imagem3="/im"/>
+      <Carrossel imagem3={Imagem3} />
       <main className="Main">
         <Section 
           titulo="Titulo" 
@@ -22,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+

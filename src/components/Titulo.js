@@ -1,8 +1,8 @@
-import styles from "./components-css/Titulo.css"; 
+import Styles from "../Css/Titulo.module.css"; 
 
 function Titulo(props) {
     return (
-        <div className="Titulo">
+        <div className={Styles.titulo}>
             <h1>{props.titulo}</h1>
         </div>
     );
