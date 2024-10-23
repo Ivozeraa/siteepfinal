@@ -3,14 +3,6 @@
     --tom-laranja: #ff6600;
 }
 
-.imgPrincipal {
-    background-image: linear-gradient(to bottom, transparent 0%, var(--tom-verde) 80%);
-    background: url(imagemPrincipal.jpg);
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 header {
     padding: 15px;
@@ -41,6 +33,7 @@ header nav a {
     padding: 4px;
     border-radius: 50px;
     position: relative;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adicionando uma transição suave */
 }
 
 .login {
@@ -52,13 +45,13 @@ header nav a {
     color: #ff6600;
     border-radius: 15px;
     height: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavizando a transição */
 }
 
 .login:hover {
     background-color: var(--tom-laranja);
-    transition: ease-in-out 70ms;
     color: rgb(255, 255, 255);
-    scale: 1.1;
+    transform: scale(1.1); /* Trocando o 'scale' para 'transform' */
 }
 
 header nav a p {
@@ -67,8 +60,7 @@ header nav a p {
 
 .option:hover {
     color: var(--tom-laranja);
-    transition: ease-in-out 70ms;
-    scale: 1.1;
+    transform: scale(1.1); /* Melhorando o efeito de hover com transform */
 }
 
 nav ul {
@@ -82,15 +74,15 @@ nav ul {
     border: 2px double var(--tom-laranja);
     border-radius: 10px;
     opacity: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.4s ease-out, opacity 0.4s ease-out; /* Transição suave */
+    height: 0;
+    transition: height 0.4s ease-out, opacity 0.4s ease-out; /* Animação com height */
 }
 
 nav ul li {
-    padding: 10px 0px 10px 0;
+    padding: 10px;
     color: white;
     text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 nav ul li:last-child {
@@ -103,18 +95,20 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: color 0.3s ease; /* Suavizando a transição de hover */
 }
 
-.icone:hover{
+nav ul li a:hover {
+    color: var(--tom-laranja); /* Adicionando hover à lista de links */
+}
+
+.icone:hover {
     color: var(--tom-laranja);
     transition: ease-in-out 70ms;
-    
 }
 
-/* Classe que mostra a lista com a animação */
-
 .showList {
-    display: block;
-    max-height: 300px; /* Define a altura máxima quando visível */
+    height: 200px; 
     opacity: 1; /* Torna o menu visível */
+    overflow: hidden;
 }

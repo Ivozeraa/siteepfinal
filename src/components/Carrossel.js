@@ -23,6 +23,7 @@ export function Carrossel(props) {
         </div>
         <div>
           <img src={props.imagem2} alt="Descrição da Imagem 2" />
+          <h1 className='tituloImg1'>Teste</h1>
           <p>Legenda da Imagem 2</p>
         </div>
         <div>
@@ -30,6 +31,7 @@ export function Carrossel(props) {
           <p>Legenda da Imagem 3</p>
         </div>
       </Slider>
+      <h1 className='titulo'>Bem-vindo ao site <br></br>da EEEP Irmã Ana Zélia da Fonseca</h1>
     </div>
   );
 }

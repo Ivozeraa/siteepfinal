@@ -12,7 +12,8 @@ export function App() {
       <div className="imagemPrincipal">
       </div>
       <Header />
-      <Carrossel imagem3={Imagem3} />
+      <Carrossel imagem3={Imagem3} imagem2={Imagem3} />
+      
       <main className="Main">
         <Section 
           titulo="Titulo" 
