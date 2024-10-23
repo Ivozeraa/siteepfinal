@@ -10,7 +10,6 @@ export function App() {
   return (
     <div className="App">
       <div className="imagemPrincipal">
-        {/* Você pode colocar a imagem principal aqui, se necessário */}
       </div>
       <Header />
       <Carrossel imagem3={Imagem3} />
