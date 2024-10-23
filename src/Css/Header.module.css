@@ -105,7 +105,7 @@ nav ul li a {
     justify-content: space-between;
 }
 
-nav ul li a:hover{
+.icone:hover{
     color: var(--tom-laranja);
     transition: ease-in-out 70ms;
     

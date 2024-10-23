@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'; // Correção da biblioteca
-import styles from '../Css/Footer.module.css'; // Correto uso de CSS modules
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'; 
+import styles from '../Css/Footer.module.css'; 
 
 export function Footer() {
     return (
@@ -8,7 +8,7 @@ export function Footer() {
             <footer>
                 <p>© 2024 Irmã Ana Zélia da Fonseca - Todos os direitos reservados.</p>
                 <a href="https://www.instagram.com/epirmaanazelia?igsh=eHFxNHl0NnNlNjVh" aria-label="Instagram">
-                    <FontAwesomeIcon icon={faInstagram} /> {/* Ícone do Instagram adicionado */}
+                    <FontAwesomeIcon icon={faInstagram} /> 
                 </a>
             </footer>
         </div>

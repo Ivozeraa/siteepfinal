@@ -20,24 +20,24 @@ const toggleList = () => {
                 
                 <nav>
 
-                    <a href="#" className="option"> 
+                    <a href="#" className={styles.option}> 
                         <FontAwesomeIcon icon={faHome} />
                     </a>
 
                     <div style={{ position: 'relative' }}  >
-                        <a onClick={toggleList} className="option"> 
+                        <a onClick={toggleList} className={styles.option}> 
                             <FontAwesomeIcon icon={faGraduationCap}  />
                         </a>
 
-                        <ul className={showList ? 'showList' : ''}>
-                            <li><a href="#">Administração<FontAwesomeIcon icon={faEnvelope} /></a></li>
-                            <li><a href="#">Eletrotecnica<FontAwesomeIcon icon={faBolt} /></a></li>
-                            <li><a href="#">Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
-                            <li><a href="#">Informática<FontAwesomeIcon icon={faCode} /></a></li>
+                        <ul className={styles.showList ? 'showList' : ''}>
+                            <li><a href="#" >Administração<FontAwesomeIcon icon={faEnvelope} /></a></li>
+                            <li><a href="#" >Eletrotecnica<FontAwesomeIcon icon={faBolt} /></a></li>
+                            <li><a href="#" >Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
+                            <li><a href="#" >Informática<FontAwesomeIcon icon={faCode} /></a></li>
                         </ul>
 
                     </div>
-                    <a href="#" className='login'>
+                    <a href="#" className={styles.login}>
                         <FontAwesomeIcon icon={faUser} />
                         <p>Login</p>
                     </a>
