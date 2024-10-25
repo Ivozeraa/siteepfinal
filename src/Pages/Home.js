@@ -2,7 +2,7 @@ import Imagem3 from '../components/Imgs/Biblioteca.jpeg';
 import Imagem2 from '../components/Imgs/LabLinguas.jpeg';
 import Imagem1 from '../components/Imgs/Frente1.jpeg';
 import { Carrossel } from '../components/Carrossel';
-import { Section } from '../components/Section';
+import Titulo from '../components/Titulo';
  
 export function Home(){
     return(
@@ -10,69 +10,7 @@ export function Home(){
             <div className="App">
                 <div className="imagemPrincipal"></div>
                 <Carrossel imagem3={Imagem3} imagem2={Imagem2} imagem1={Imagem1}/>
-                
-                <main className="Main">
-                    <Section 
-                    titulo="Titulo" 
-                    />
-                </main>
-
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-                <h1>Teste</h1>
-
+                <Titulo titulo="opa"/>
             </div>
         </>
     )

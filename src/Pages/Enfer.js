@@ -1,7 +1,7 @@
 export function Enfer(){
     return(
         <>
-            <h1>Enfer</h1>
+            <h1>merdagem</h1>
         </>
     )
 }
