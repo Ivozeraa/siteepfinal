@@ -1,8 +1,8 @@
-import Imagem3 from '../Components/Imgs/Biblioteca.jpeg';
-import Imagem2 from '../Components/Imgs/LabLinguas.jpeg';
-import Imagem1 from '../Components/Imgs/Frente1.jpeg';
-import { Carrossel } from '../Components/Carrossel';
-import { Section } from '../Components/Section';
+import Imagem3 from '../components/Imgs/Biblioteca.jpeg';
+import Imagem2 from '../components/Imgs/LabLinguas.jpeg';
+import Imagem1 from '../components/Imgs/Frente1.jpeg';
+import { Carrossel } from '../components/Carrossel';
+import { Section } from '../components/Section';
  
 export function Home(){
     return(
