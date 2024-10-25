@@ -30,8 +30,8 @@ export function Header() {
                         </button>
 
                         <ul className={showList ? 'showList' : ''}>
-                            <li><a href="/Adm">Administração<FontAwesomeIcon icon={faEnvelope} /></a></li>
-                            <li><a href="/Eletro">Eletrotecnica<FontAwesomeIcon icon={faBolt} /></a></li>
+                            <li><a href="/Adm"><p>Administração</p><FontAwesomeIcon icon={faEnvelope} /></a></li>
+                            <li><a href="/Eletro"><p>Eletrotecnica</p><FontAwesomeIcon icon={faBolt} /></a></li>
                             <li><a href="/Enfermagem">Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
                             <li><a href="/Informatica">Informática<FontAwesomeIcon icon={faCode} /></a></li>
                         </ul>
