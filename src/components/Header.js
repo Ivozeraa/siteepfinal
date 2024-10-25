@@ -29,13 +29,43 @@ export function Header() {
                             <FontAwesomeIcon icon={faGraduationCap} />
                         </button>
 
+                        {/* Tabela de Cursos*/}
                         <ul className={showList ? 'showList' : ''}>
-                            <li><a href="/Adm"><p>Administração </p>
-                            <p><FontAwesomeIcon icon={faEnvelope} /></p>
-                            </a></li>
-                            <li><a href="/Eletro"><p>Eletrotecnica</p><FontAwesomeIcon icon={faBolt} /></a></li>
-                            <li><a href="/Enfermagem">Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
-                            <li><a href="/Informatica">Informática<FontAwesomeIcon icon={faCode} /></a></li>
+                            <li>
+                                <a href="/Adm">
+                                    <div className='curso'>
+                                        <p>Administração </p>
+                                        <p><FontAwesomeIcon icon={faEnvelope}/></p>
+                                    </div>
+                                    </a>
+                            </li>
+
+                            <li>
+                                <a href="/Eletro">
+                                    <div className='curso'>
+                                        <p >Eletrotecnica</p>
+                                        <p><FontAwesomeIcon icon={faBolt} /></p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Enfermagem">
+                                    <div className='curso'>
+                                        <p>Enfermagem</p>
+                                        <p><FontAwesomeIcon icon={faSyringe} /></p>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Informatica">
+                                    <div className='curso'>
+                                        <p>Informática</p>
+                                        <p><FontAwesomeIcon icon={faCode} /></p>
+                                    </div>
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
@@ -49,3 +79,5 @@ export function Header() {
         </div>
     );
 }
+
+
