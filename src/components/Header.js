@@ -50,7 +50,7 @@ export function Header() {
                             </li>
 
                             <li>
-                                <a href="/Enfermagem">
+                                <a href="/Enfer">
                                     <div className='curso'>
                                         <p>Enfermagem</p>
                                         <p><FontAwesomeIcon icon={faSyringe} /></p>

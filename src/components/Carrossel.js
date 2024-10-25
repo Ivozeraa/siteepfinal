@@ -12,6 +12,7 @@ export function Carrossel(props) {
     slidesToShow: 1,  // Número de slides a mostrar
     slidesToScroll: 1,// Número de slides a rolar
     arrows: true,     // Mostrar botões de próxima/anterior
+    draggable: false,
   };
 
   return (
@@ -27,7 +28,7 @@ export function Carrossel(props) {
           <img src={props.imagem3} alt="Descrição da Imagem 3" />
         </div>
       </Slider>
-      <h1 className={Styles.titulo}>Bem-vindo ao site <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
+      <h1 className={Styles.titulo}>Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
     </div>
   );
 }

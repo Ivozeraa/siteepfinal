@@ -15,9 +15,9 @@ export function Router(){
                 <Route path='/' element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registro" element={<Register />} />
-                <Route path='/adm' element={<Informatica />}/>
-                <Route path='/enfer' element={<Informatica />}/>
-                <Route path='/eletro' element={<Informatica />}/>
+                <Route path='/adm' element={<Adm />}/>
+                <Route path='/enfer' element={<Enfer />}/>
+                <Route path='/eletro' element={<Eletro />}/>
                 <Route path='/informatica' element={<Informatica />}/>
                 
                 
