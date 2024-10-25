@@ -1,8 +1,12 @@
 :root {
     --tom-verde: #006b09;
+    --tom-verde2: #00be10;
     --tom-laranja: #ff6600;
 }
 
+.Header {
+    width: 100%;
+}
 
 header {
     padding: 15px;
@@ -13,6 +17,10 @@ header {
     background-color: var(--tom-verde);
     border-bottom: double 10px var(--tom-laranja);
 }
+h1{
+    text-align: center;
+    
+}
 
 header img {
     width: 70px;
@@ -22,7 +30,7 @@ header img {
 header nav {
     display: flex;
     align-items: center;
-    position: relative; /* Para o posicionamento correto da lista */
+    position: relative;
 }
 
 header nav a {
@@ -33,7 +41,7 @@ header nav a {
     padding: 4px;
     border-radius: 50px;
     position: relative;
-    transition: color 0.3s ease, transform 0.3s ease; /* Adicionando uma transição suave */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .login {
@@ -45,22 +53,41 @@ header nav a {
     color: #ff6600;
     border-radius: 15px;
     height: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Suavizando a transição */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .login:hover {
     background-color: var(--tom-laranja);
     color: rgb(255, 255, 255);
-    transform: scale(1.1); /* Trocando o 'scale' para 'transform' */
+    transform: scale(1.1);
 }
 
 header nav a p {
     padding: 0 5px;
 }
 
+.option {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 800;
+    margin-right: 30px;
+    padding: 4px;
+    border-radius: 50px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+}
+
 .option:hover {
     color: var(--tom-laranja);
-    transform: scale(1.1); /* Melhorando o efeito de hover com transform */
+    transform: scale(1.1);
+}
+
+.option {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 nav ul {
@@ -75,7 +102,7 @@ nav ul {
     border-radius: 10px;
     opacity: 0;
     height: 0;
-    transition: height 0.4s ease-out, opacity 0.4s ease-out; /* Animação com height */
+    transition: height 0.4s ease-out, opacity 0.4s ease-out;
 }
 
 nav ul li {
@@ -95,11 +122,11 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: color 0.3s ease; /* Suavizando a transição de hover */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--tom-laranja); /* Adicionando hover à lista de links */
+    color: var(--tom-laranja);
 }
 
 .icone:hover {
@@ -108,7 +135,7 @@ nav ul li a:hover {
 }
 
 .showList {
-    height: 200px; 
-    opacity: 1; /* Torna o menu visível */
+    height: 200px;
+    opacity: 1;
     overflow: hidden;
 }

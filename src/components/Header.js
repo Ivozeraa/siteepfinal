@@ -6,7 +6,7 @@ import styles from "../Css/Header.css";
 export function Header() {
     const [showList, setShowList] = useState(false); 
     
-const toggleList = () => {
+    const toggleList = () => {
         setShowList(!showList); 
     };
 
@@ -20,24 +20,24 @@ const toggleList = () => {
                 
                 <nav>
 
-                    <a href="#" className="option"> 
+                    <a href="/" className="option"> 
                         <FontAwesomeIcon icon={faHome} />
                     </a>
 
                     <div style={{ position: 'relative' }}  >
-                        <a onClick={toggleList} className="option"> 
-                            <FontAwesomeIcon icon={faGraduationCap}  />
-                        </a>
+                        <button onClick={toggleList} className={"option"}>
+                            <FontAwesomeIcon icon={faGraduationCap} />
+                        </button>
 
                         <ul className={showList ? 'showList' : ''}>
-                            <li><a href="#">Administração<FontAwesomeIcon icon={faEnvelope} /></a></li>
-                            <li><a href="#">Eletrotecnica<FontAwesomeIcon icon={faBolt} /></a></li>
-                            <li><a href="#">Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
-                            <li><a href="#">Informática<FontAwesomeIcon icon={faCode} /></a></li>
+                            <li><a href="/Adm">Administração<FontAwesomeIcon icon={faEnvelope} /></a></li>
+                            <li><a href="/Eletro">Eletrotecnica<FontAwesomeIcon icon={faBolt} /></a></li>
+                            <li><a href="/Enfermagem">Enfermagem<FontAwesomeIcon icon={faSyringe} /></a></li>
+                            <li><a href="/Informatica">Informática<FontAwesomeIcon icon={faCode} /></a></li>
                         </ul>
 
                     </div>
-                    <a href="#" className='login'>
+                    <a href="/login" className='login'>
                         <FontAwesomeIcon icon={faUser} />
                         <p>Login</p>
                     </a>
@@ -47,4 +47,3 @@ const toggleList = () => {
         </div>
     );
 }
-
