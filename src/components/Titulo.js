@@ -1,11 +1,10 @@
 import Styles from "../Css/Titulo.module.css"; 
 
-function Titulo(props) {
-    return (
-        <div className={Styles.titulo}>
-            <h1>{props.titulo}</h1>
-        </div>
+export function Titulo(props){
+
+    return(
+        <>
+            <h1 className={Styles.Titulo}>{props.titulo}</h1>
+        </>
     );
 }
-
-export default Titulo;

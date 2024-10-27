@@ -6,19 +6,19 @@ import Styles from '../Css/Carrossel.module.css';
 
 export function Carrossel(props) {
   const settings = {
-    autoplay: true,   // Habilitar autoplay
-    infinite: true,   // Habilitar loop infinito
-    speed: 500,       // Velocidade de transição
-    slidesToShow: 1,  // Número de slides a mostrar
-    slidesToScroll: 1,// Número de slides a rolar
-    arrows: true,     // Mostrar botões de próxima/anterior
+    autoplay: true,  
+    infinite: true,  
+    speed: 500,      
+    slidesToShow: 1,  
+    slidesToScroll: 1,
+    arrows: true,     
     draggable: false,
   };
 
   return (
     <div className={Styles.carrosselContainer}>
       <Slider {...settings}>
-        <div>
+        <div >
           <img src={props.imagem1} alt="" />
         </div>
         <div>
@@ -28,7 +28,7 @@ export function Carrossel(props) {
           <img src={props.imagem3} alt="Descrição da Imagem 3" />
         </div>
       </Slider>
-      <h1 className={Styles.titulo}>Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
+      <h1 className={Styles.titulo}>Bem-vindo ao site da <br/> <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
     </div>
   );
 }
