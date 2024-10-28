@@ -27,7 +27,7 @@ export const Login = () => {
       localStorage.setItem('userName', userName);
 
       alert('Login bem-sucedido!');
-      navigate('/HomeLogado'); 
+      navigate('/Home'); 
     } catch (error) {
       setError('Erro ao fazer login. Verifique suas credenciais.');
     }
@@ -45,7 +45,7 @@ export const Login = () => {
       localStorage.setItem('userName', userName);
 
       alert('Login com Google bem-sucedido!');
-      navigate('/HomeLogado'); 
+      navigate('/Home'); 
     } catch (error) {
       setError('Erro ao fazer login com Google.');
     }
