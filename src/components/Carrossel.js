@@ -28,7 +28,7 @@ export function Carrossel(props) {
           <img src={props.imagem3} alt="Descrição da Imagem 3" />
         </div>
       </Slider>
-      <h1 className={Styles.titulo}>Bem-vindo ao site da <br/> <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
+      <h1 className={Styles.titulo}>Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
       <p className={Styles.desc}><strong>Transformando vidas por meio da educação e da formação profissional.</strong></p>
     </div>
   );

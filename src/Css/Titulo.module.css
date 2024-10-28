@@ -8,3 +8,8 @@
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.445);
 }
 
+@media (max-width: 768px){
+    .titulo{
+        font-size: 0.7rem;
+    }
+}
