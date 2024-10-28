@@ -19,8 +19,7 @@ export function Router(){
                 <Route path='/enfer' element={<Enfer />}/>
                 <Route path='/eletro' element={<Eletro />}/>
                 <Route path='/informatica' element={<Informatica />}/>
-                
-                
+                      
             </Route>
 
         </Routes>

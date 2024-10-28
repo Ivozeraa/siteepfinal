@@ -19,7 +19,8 @@ header {
 }
 
 h1{
-    text-align: center;    
+    text-align: center;  
+    font-size: 1.5rem;  
 }
 
 header img {
@@ -146,4 +147,10 @@ nav ul li a:hover {
     height: 200px;
     opacity: 1;
     overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    header img {
+        height: 50px;
+    }
 }
