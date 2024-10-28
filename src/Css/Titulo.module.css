@@ -1,4 +1,10 @@
-Titulo{
-    margin: 0;
+.titulo {
+    margin: 50px 0;
+    padding: 7px;
+    color: rgb(255, 255, 255);
+    background-color: var(--tom-verde);
+    width: 80%;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.445);
 }
 
