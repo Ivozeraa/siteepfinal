@@ -1,22 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-*{
+@font-face {
+  font-family: 'Satoshi';
+  src: url('fonts/Satoshi-Black.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Satoshi";
   list-style-type: none;
 }
 
 :root {
   --tom-verde: #006b09;
-  --tom-verde2: #00be10;
+  --tom-verde2: #22882a;
   --tom-laranja: #ff6600;
   --tom-vermelho: #ff2525;
   --background1: #cccccb;
-  ----text-color: #000000;
+  --text-color: #000000; /* Corrigido aqui */
+  --white: #ffffff;
+  --gray-100: #e1e1e6;
+  --gray-300: #c4c4cc;
+  --gray-400: #8d8d99;
+  --gray-600: #323238;
+  --gray-700: #29292e;
+  --gray-800: #202024;
+  --gray-900: #121214;
+  --green-300: #00B37E;
+  --green-500: #00875f;
+  --red-500: #F75A68;
 }
 
 ::-webkit-scrollbar {

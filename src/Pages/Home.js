@@ -21,18 +21,21 @@ export function Home(){
                 <Titulo titulo="Orgão Gestor"/>
                 <div className={Styles.gestao}>
                         <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
                             <img src={AM}/>
                             <h3>Anchieta Mariano</h3>
                             <p>Diretor</p>
                         </div>
 
                         <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
                             <img src={RA}/>
                             <h3>Rivanildo Alencar</h3>
                             <p>Coordenador</p>
                         </div>
 
                         <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
                             <img src={WT}/>
                             <h3>Wegila Tavares</h3>
                             <p>Coordenadora</p>
