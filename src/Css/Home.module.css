@@ -7,15 +7,23 @@
 .gestao{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
+    margin: 20px;
     
 }
 
 .card{
+    background-color: var(--tom-verde);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    color: rgb(255, 255, 255);
+
     img{
         width: 200px;
         height: 200px;
         border-radius: 50%;
+
     }
 }
