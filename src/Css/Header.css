@@ -13,7 +13,7 @@ header {
     border-bottom: double 10px var(--tom-laranja);
 }
 
-h1{
+h1 {
     text-align: center;    
 }
 
@@ -98,7 +98,6 @@ nav ul {
     opacity: 0;
     display: none;
     height: 0;
-    
 }
 
 nav ul li {
@@ -169,17 +168,13 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
 
-
-@media (max-width: 768px){
-    header{
-        h1{
-          font-size: 1.2rem;
-        }
-    
-        img{
-          width: 40px;
-          height: 40px;
-        }
-      }
+    header img {
+        width: 40px;
+        height: 40px;
+    }
 }

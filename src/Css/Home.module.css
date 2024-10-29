@@ -3,3 +3,19 @@
     color: rgb(0, 0, 0);
     margin: auto;
 }
+
+.gestao{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+.card{
+    img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+}
