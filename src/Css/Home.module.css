@@ -7,15 +7,60 @@
 .gestao{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
+    margin: 20px;
     
 }
 
 .card{
-    img{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
+    background-color: var(--tom-verde);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    color: rgb(255, 255, 255);
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .foto{
+        background-color: var(--tom-verde2);
+        height: 70px;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        margin: 0 0 70px 0;
     }
+    img{
+        padding: 3px;
+        border: solid 2px var(--tom-laranja);
+        width: 100px;
+        height: 100px;
+        margin: 0 0 15px 0 ;
+        border-radius: 50%;
+        position: absolute;
+        margin-top: 20px;
+        background-color: var(--tom-verde);
+    }
+    p{
+        color: rgb(170, 170, 170);
+    }
+    
+}
+
+@media (max-width: 768px){
+    .card{
+        height: 200px;
+        width: 100px;
+        img{
+            width: 50px;
+            height: 50px;
+            margin-top: 45px;
+
+        }
+
+        h3, p{
+            font-size: 10px;
+        }
+    }
+    
 }

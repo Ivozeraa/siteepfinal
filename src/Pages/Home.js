@@ -6,7 +6,7 @@ import Titulo from '../components/Titulo';
 import Styles from "../Css/Home.module.css"
 import WT from "../components/Imgs/OIP.jpg"
 import RA from "../components/Imgs/R.jpg"
-import AM from "../components"
+import AM from "../components/Imgs/OIP (1).jpg"
  
 export function Home(){
     return(
@@ -21,18 +21,21 @@ export function Home(){
                 <Titulo titulo="Orgão Gestor"/>
                 <div className={Styles.gestao}>
                         <div className={Styles.card}>
-                            <img src=''/>
+                            <div className={Styles.foto}></div>
+                            <img src={AM}/>
                             <h3>Anchieta Mariano</h3>
                             <p>Diretor</p>
                         </div>
 
                         <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
                             <img src={RA}/>
                             <h3>Rivanildo Alencar</h3>
                             <p>Coordenador</p>
                         </div>
 
                         <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
                             <img src={WT}/>
                             <h3>Wegila Tavares</h3>
                             <p>Coordenadora</p>

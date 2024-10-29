@@ -1,9 +1,3 @@
-/* LoginRegister.module.css */
-
-:global * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .loginContainer {
   max-width: 400px;
   margin: 120px auto;
