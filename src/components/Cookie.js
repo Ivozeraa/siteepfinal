@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Css/Cookie.css'; 
 
-const CookieConsent = () => {
+export const Cookie = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -26,4 +26,3 @@ const CookieConsent = () => {
   );
 };
 
-export default CookieConsent;

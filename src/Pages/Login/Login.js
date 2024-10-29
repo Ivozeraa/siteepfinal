@@ -19,15 +19,13 @@ export const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       
-      // Buscando nome do usuário no Firestore
       const userDoc = await getDoc(doc(db, "users", user.uid));
       const userName = userDoc.data().name;
       
-      // Salvando no localStorage
       localStorage.setItem('userName', userName);
 
       alert('Login bem-sucedido!');
-      navigate('/Home'); 
+      navigate('/index'); 
     } catch (error) {
       setError('Erro ao fazer login. Verifique suas credenciais.');
     }
@@ -45,7 +43,7 @@ export const Login = () => {
       localStorage.setItem('userName', userName);
 
       alert('Login com Google bem-sucedido!');
-      navigate('/Home'); 
+      navigate('/index'); 
     } catch (error) {
       setError('Erro ao fazer login com Google.');
     }
@@ -91,4 +89,3 @@ export const Login = () => {
     </>
   );
 };
-

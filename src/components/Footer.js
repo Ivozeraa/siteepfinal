@@ -11,12 +11,12 @@ export function Footer() {
                     <a href="https://www.instagram.com/epirmaanazelia?igsh=eHFxNHl0NnNlNjVh" aria-label="Instagram">
                         <FontAwesomeIcon icon={faInstagram} /> 
                     </a>
-                    <a href='#'>
+                    <a href='#face'>
                     <FontAwesomeIcon icon={faFacebook} /> 
                         
                     </a>
 
-                    <a href='#'>
+                    <a href='#gogle'>
                     <FontAwesomeIcon icon={faGoogle} /> 
                         
                     </a>

@@ -1,54 +1,65 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { auth } from '../Services/firebase'; 
 import styles from "../Css/Header.css"; 
 
 export function Header() {
-    const [showList, setShowList] = useState(false); 
-    
+    const [showList, setShowList] = useState(false);
+    const [user, setUser] = useState(null);
+
     const toggleList = () => {
-        setShowList(!showList); 
+        setShowList(!showList);
     };
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(currentUser => {
+            if (currentUser) {
+                setUser({
+                    name: currentUser.displayName,
+                    photoURL: currentUser.photoURL || "/default-avatar.png", 
+                });
+            } else {
+                setUser(null);
+            }
+        });
+        return () => unsubscribe();
+    }, []);
 
     return (
         <div className={styles.Header}>
             <div className='imgPrincipal'> </div>
             <header>
-
                 <img src="/logoEEEP.png" alt="EEEP Logo" />
                 <h1>EEEP Irmã Ana Zélia da Fonseca</h1>
                 
                 <nav>
-
                     <a href="/" className="option"> 
                         <FontAwesomeIcon icon={faHome} />
                     </a>
 
-                    <div style={{ position: 'relative' }}  >
+                    <div style={{ position: 'relative' }}>
                         <button onClick={toggleList} className={"option"}>
                             <FontAwesomeIcon icon={faGraduationCap} />
                         </button>
-
-                        {/* Tabela de Cursos*/}
+                        
                         <ul className={showList ? 'showList' : ''}>
                             <li>
                                 <a href="/Adm">
                                     <div className='curso'>
-                                        <p>Administração </p>
+                                        <p>Administração</p>
                                         <p><FontAwesomeIcon icon={faEnvelope}/></p>
                                     </div>
-                                    </a>
+                                </a>
                             </li>
-
                             <li>
                                 <a href="/Eletro">
                                     <div className='curso'>
-                                        <p >Eletrotecnica</p>
+                                        <p>Eletrotécnica</p>
                                         <p><FontAwesomeIcon icon={faBolt} /></p>
                                     </div>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="/Enfer">
                                     <div className='curso'>
@@ -57,7 +68,6 @@ export function Header() {
                                     </div>
                                 </a>
                             </li>
-
                             <li>
                                 <a href="/Informatica">
                                     <div className='curso'>
@@ -67,17 +77,20 @@ export function Header() {
                                 </a>
                             </li>
                         </ul>
-
                     </div>
-                    <a href="/login" className='login'>
-                        <FontAwesomeIcon icon={faUser} />
-                        <p>Login</p>
-                    </a>
-
+                    
+                    {user ? (
+                        <div className="user-profile">
+                            <img src={user.photoURL} alt={user.name} className="user-icon" />
+                        </div>
+                    ) : (
+                        <a href="/login" className='login'>
+                            <FontAwesomeIcon icon={faUser} />
+                            <p>Login</p>
+                        </a>
+                    )}
                 </nav>
             </header>
         </div>
     );
 }
-
-
