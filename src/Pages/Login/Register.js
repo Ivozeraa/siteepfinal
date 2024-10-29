@@ -17,6 +17,13 @@ export const Register = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setError('');  // Limpa o erro antes de iniciar o processo de registro
+
+    if (!name) {
+      setError('O nome é obrigatório.');
+      return;
+    }
+
     try {
       if (role !== 'Aluno' && role !== 'Convidado') {
         setError('Somente alunos e convidados podem se registrar.');
@@ -39,12 +46,14 @@ export const Register = () => {
       navigate('/login'); // Redireciona para a página de login após registro bem-sucedido
     } catch (error) {
       console.error("Erro ao registrar:", error.message);
-      setError('Erro ao registrar. Tente novamente.');
+      setError('Erro ao registrar. Verifique as informações e tente novamente.');
     }
   };
 
   const handleGoogleRegister = async () => {
     const provider = new GoogleAuthProvider();
+    setError('');  // Limpa o erro antes de iniciar o processo de registro com Google
+
     try {
       const userCredential = await signInWithPopup(auth, provider);
       const user = userCredential.user;
@@ -61,7 +70,8 @@ export const Register = () => {
       alert('Registrado com Google!');
       navigate('/login'); // Redireciona para a página de login após registro bem-sucedido
     } catch (error) {
-      setError('Erro ao registrar com Google.');
+      console.error("Erro ao registrar com Google:", error.message);
+      setError('Erro ao registrar com Google. Tente novamente.');
     }
   };
 
@@ -129,4 +139,3 @@ export const Register = () => {
     </>
   );
 };
-
