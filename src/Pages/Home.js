@@ -7,6 +7,7 @@ import Styles from "../Css/Home.module.css"
 import WT from "../components/Imgs/OIP.jpg"
 import RA from "../components/Imgs/R.jpg"
 import AM from "../components/Imgs/OIP (1).jpg"
+import AS from "../components/Imgs/R (1).jpg"
  
 export function Home(){
     return(
@@ -16,7 +17,7 @@ export function Home(){
                 <Carrossel imagem3={Imagem3} imagem2={Imagem2} imagem1={Imagem1}/>
                 <Titulo titulo="Objetivo"/>
                 <div className={Styles.container}>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+                    <p>A Escola Profissionalizante Irmã Ana Zélia da Fonseca tem como objetivo oferecer formação técnica e profissional de qualidade, preparando os alunos para o mercado de trabalho. Através de um currículo diversificado e voltado para as demandas do setor, a escola busca desenvolver habilidades práticas e teóricas, além de promover valores como ética, cidadania e responsabilidade social. A instituição também visa fomentar a inclusão social e o empoderamento dos estudantes, contribuindo para a construção de uma sociedade mais justa e equitativa. </p>
                 </div>
                 <Titulo titulo="Orgão Gestor"/>
                 <div className={Styles.gestao}>
@@ -38,6 +39,13 @@ export function Home(){
                             <div className={Styles.foto}></div>
                             <img src={WT}/>
                             <h3>Wegila Tavares</h3>
+                            <p>Coordenadora</p>
+                        </div>
+
+                        <div className={Styles.card}>
+                            <div className={Styles.foto}></div>
+                            <img src={AS}/>
+                            <h3>Aline Santos</h3>
                             <p>Coordenadora</p>
                         </div>
                 </div>
