@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem auto;
+    margin: auto;
     padding: 1.5rem;
 }
 
@@ -34,11 +34,15 @@
 }
 
 .TituloDisciplina {
+    display: flex;
     font-size: 2.5rem;
-    color: var(--tom-preto);
+    color: var(--white);
     font-weight: bold;
-    margin-bottom: 1rem;
     text-align: center;
+    background-color: var(--tom-verde);
+    width: 80%;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 
 .SubtituloDisciplinas {

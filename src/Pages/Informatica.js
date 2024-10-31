@@ -1,7 +1,6 @@
 import Styles from '../Css/Pages/Cursos.module.css';
 import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
 import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
-import Titulo from "../components/Titulo"
 
 export function Informatica() {
     return (
@@ -14,7 +13,7 @@ export function Informatica() {
             </p>
             
             <div className={Styles.DisciplinasCurso}>
-                <Titulo titulo="Disciplinas do Curso" />
+                <h1 className={Styles.TituloDisciplina}>Disciplinas do Curso</h1>
                 <h2 className={Styles.SubtituloDisciplinas}>Primeiro Ano:</h2>
                 <ul className={Styles.ListaDisciplinas}>
                     <li className={Styles.ItemDisciplinas}>HTML e CSS</li>

@@ -23,28 +23,28 @@ export function Home(){
                 <div className={Styles.gestao}>
                         <div className={Styles.card}>
                             <div className={Styles.foto}></div>
-                            <img src={AM}/>
+                            <img src={AM} alt='Anchieta Mariano - Diretor'/>
                             <h3>Anchieta Mariano</h3>
                             <p>Diretor</p>
                         </div>
 
                         <div className={Styles.card}>
                             <div className={Styles.foto}></div>
-                            <img src={RA}/>
+                            <img src={RA} alt='Rivanildo Alencar - Coordenador'/>
                             <h3>Rivanildo Alencar</h3>
                             <p>Coordenador</p>
                         </div>
 
                         <div className={Styles.card}>
                             <div className={Styles.foto}></div>
-                            <img src={WT}/>
+                            <img src={WT} alt='Wergila Tavares - Coordenadora'/>
                             <h3>Wegila Tavares</h3>
                             <p>Coordenadora</p>
                         </div>
 
                         <div className={Styles.card}>
                             <div className={Styles.foto}></div>
-                            <img src={AS}/>
+                            <img src={AS} alt='Aline Santos - Coordenadora'/>
                             <h3>Aline Santos</h3>
                             <p>Coordenadora</p>
                         </div>
