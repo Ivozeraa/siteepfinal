@@ -8,6 +8,7 @@ import WT from "../components/Imgs/OIP.jpg"
 import RA from "../components/Imgs/R.jpg"
 import AM from "../components/Imgs/OIP (1).jpg"
 import AS from "../components/Imgs/R (1).jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
  
 export function Home(){
     return(
@@ -19,6 +20,42 @@ export function Home(){
                 <div className={Styles.container}>
                     <p>A Escola Profissionalizante Irmã Ana Zélia da Fonseca tem como objetivo oferecer formação técnica e profissional de qualidade, preparando os alunos para o mercado de trabalho. Através de um currículo diversificado e voltado para as demandas do setor, a escola busca desenvolver habilidades práticas e teóricas, além de promover valores como ética, cidadania e responsabilidade social. A instituição também visa fomentar a inclusão social e o empoderamento dos estudantes, contribuindo para a construção de uma sociedade mais justa e equitativa. </p>
                 </div>
+
+                <Titulo titulo="Motivos de Ingressão"/>
+                <div className={Styles.motivos}>
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+
+                    <div className={Styles.cardM}>
+                        <h2></h2>
+                    </div>
+                </div>
+
                 <Titulo titulo="Orgão Gestor"/>
                 <div className={Styles.gestao}>
                         <div className={Styles.card}>
@@ -49,6 +86,9 @@ export function Home(){
                             <p>Coordenadora</p>
                         </div>
                 </div>
+
+                
+
                 
             </div>
         </>

@@ -50,6 +50,26 @@
     
 }
 
+.card:hover{
+    scale: 1.05;
+    transition: 70ms ease-in-out;
+}
+
+.motivos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.cardM{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+}
+
 @media (max-width: 768px){
     .card{
         height: 200px;

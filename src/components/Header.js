@@ -47,32 +47,32 @@ export function Header() {
                             <li>
                                 <a href="/Adm">
                                     <div className='curso'>
-                                        <p>Administração</p>
                                         <p><FontAwesomeIcon icon={faEnvelope}/></p>
+                                        <p>Administração</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="/Eletro">
                                     <div className='curso'>
-                                        <p>Eletrotécnica</p>
                                         <p><FontAwesomeIcon icon={faBolt} /></p>
+                                        <p>Eletrotécnica</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="/Enfer">
                                     <div className='curso'>
-                                        <p>Enfermagem</p>
                                         <p><FontAwesomeIcon icon={faSyringe} /></p>
+                                        <p>Enfermagem</p>
                                     </div>
                                 </a>
                             </li>
                             <li>
                                 <a href="/Informatica">
                                     <div className='curso'>
-                                        <p>Informática</p>
                                         <p><FontAwesomeIcon icon={faCode} /></p>
+                                        <p>Informática</p>
                                     </div>
                                 </a>
                             </li>
