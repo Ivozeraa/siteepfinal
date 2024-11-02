@@ -51,9 +51,6 @@ export function Home(){
                         <h2></h2>
                     </div>
 
-                    <div className={Styles.cardM}>
-                        <h2></h2>
-                    </div>
                 </div>
 
                 <Titulo titulo="Orgão Gestor"/>
