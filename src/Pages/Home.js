@@ -9,7 +9,7 @@ import RA from "../components/Imgs/R.jpg"
 import AM from "../components/Imgs/OIP (1).jpg"
 import AS from "../components/Imgs/R (1).jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- 
+import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 export function Home(){
     return(
         <>
@@ -24,31 +24,33 @@ export function Home(){
                 <Titulo titulo="Motivos de Ingressão"/>
                 <div className={Styles.motivos}>
                     <div className={Styles.cardM}>
-                        <h2></h2>
+                        <FontAwesomeIcon icon={faTrophy}/>
+                        <h3>Melhor escola da CREDE-20</h3>
                     </div>
 
                     <div className={Styles.cardM}>
-                        <h2></h2>
+                        <FontAwesomeIcon icon={faBook}/>
+                        <h3>Profissionais qualificados</h3>
                     </div>
 
                     <div className={Styles.cardM}>
-                        <h2></h2>
+                        <FontAwesomeIcon icon={faWrench}/>
+                        <h3>Cursos técnicos</h3>
                     </div>
 
                     <div className={Styles.cardM}>
-                        <h2></h2>
+                      <FontAwesomeIcon icon={faSchool}/>
+                        <h3>infraestrutura e recursos</h3>
                     </div>
 
                     <div className={Styles.cardM}>
-                        <h2></h2>
+                        <FontAwesomeIcon icon={faBriefcase}/>
+                        <h3>Bolsa estágio</h3>
                     </div>
 
                     <div className={Styles.cardM}>
-                        <h2></h2>
-                    </div>
-
-                    <div className={Styles.cardM}>
-                        <h2></h2>
+                        <FontAwesomeIcon icon={faProjectDiagram}/>
+                        <h3>Projetos interdisciplinares</h3>
                     </div>
 
                 </div>
