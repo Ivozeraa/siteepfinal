@@ -1,12 +1,10 @@
 .ContainerCurso {
-    width: 90%;
     max-width: 1200px;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 1.5rem;
 }
 
 .NomeCurso {
@@ -30,7 +28,7 @@
 
 .DisciplinasCurso {
     width: 100%;
-    padding: 2rem;
+
 }
 
 .TituloDisciplina {
@@ -38,11 +36,12 @@
     font-size: 2.5rem;
     color: var(--white);
     font-weight: bold;
-    text-align: center;
+    text-align: left; 
     background-color: var(--tom-verde);
     width: 80%;
     border-radius: 0 50px 50px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    padding-left: 1rem; 
 }
 
 .SubtituloDisciplinas {
