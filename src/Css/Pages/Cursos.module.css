@@ -101,6 +101,10 @@
 .ProfessoresCurso{
     display: flex;
     flex-direction: column;
+    .ProfCursoTitulo{
+        text-shadow: -2px 2px 0 var(--tom-verde2);
+    }
+
     .ProfCursoDiv{
         display: flex;
         align-items: center;
@@ -121,5 +125,6 @@
         color: var(--white);
         border: solid 2px var(--tom-laranja);
         height: 250px;
+        box-shadow: 2px 2px 20px black;
     }
 }

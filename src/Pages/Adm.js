@@ -46,8 +46,7 @@ Com uma abordagem prática, o curso conta com atividades que simulam situações
                 <div className={Styles.LabsCurso}>
                     <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
                     <div className={Styles.ImgsLabs}>
-                        <img src={ImgLabLing} alt="Laboratório de Línguas" />
-                        <img src={ImgLabHard} alt="Laboratório de Hardware" />
+                        <h1>*Não encontrado*</h1>
                     </div>
                 </div>
             </section>
