@@ -21,39 +21,42 @@ export function Home(){
                     <p>A Escola Profissionalizante Irmã Ana Zélia da Fonseca tem como objetivo oferecer formação técnica e profissional de qualidade, preparando os alunos para o mercado de trabalho. Através de um currículo diversificado e voltado para as demandas do setor, a escola busca desenvolver habilidades práticas e teóricas, além de promover valores como ética, cidadania e responsabilidade social. A instituição também visa fomentar a inclusão social e o empoderamento dos estudantes, contribuindo para a construção de uma sociedade mais justa e equitativa. </p>
                 </div>
 
-                <Titulo titulo="Motivos de Ingressão"/>
-                <div className={Styles.motivos}>
-                    <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faTrophy}/>
-                        <h3>Melhor escola da CREDE-20</h3>
-                    </div>
+                <div className={Styles.Bloco}>
+                    <h1 className={Styles.TituloMotivo}>Motivos para estudar em nossa escola</h1>
 
-                    <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faBook}/>
-                        <h3>Profissionais qualificados</h3>
-                    </div>
+                    <div className={Styles.motivos}>
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon icon={faTrophy}/>
+                            <h3>Melhor escola da CREDE-20</h3>
+                        </div>
 
-                    <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faWrench}/>
-                        <h3>Cursos técnicos</h3>
-                    </div>
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon icon={faBook}/>
+                            <h3>Profissionais qualificados</h3>
+                        </div>
 
-                    <div className={Styles.cardM}>
-                      <FontAwesomeIcon icon={faSchool}/>
-                        <h3>infraestrutura e recursos</h3>
-                    </div>
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon icon={faWrench}/>
+                            <h3>Cursos técnicos</h3>
+                        </div>
 
-                    <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faBriefcase}/>
-                        <h3>Bolsa estágio</h3>
-                    </div>
+                        <div className={Styles.cardM}>
+                        <FontAwesomeIcon icon={faSchool}/>
+                            <h3>infraestrutura e recursos</h3>
+                        </div>
 
-                    <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faProjectDiagram}/>
-                        <h3>Projetos interdisciplinares</h3>
-                    </div>
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon icon={faBriefcase}/>
+                            <h3>Bolsa estágio</h3>
+                        </div>
 
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon icon={faProjectDiagram}/>
+                            <h3>Projetos interdisciplinares</h3>
+                        </div>
+                    </div>
                 </div>
+               
 
                 <Titulo titulo="Orgão Gestor"/>
                 <div className={Styles.gestao}>

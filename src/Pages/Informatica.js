@@ -10,9 +10,7 @@ export function Informatica() {
                 Curso Técnico em <span>Informática</span>
             </h1>
             <p className={Styles.SobreCurso}>
-            O curso técnico de Informática da EEEP Irmã Ana Zélia da Fonseca oferece uma formação sólida e prática aos estudantes interessados em tecnologia e desenvolvimento de sistemas. Durante os três anos de curso, os alunos aprendem conteúdos que vão desde a lógica de programação até o desenvolvimento de aplicativos e sites, além de conhecimentos sobre redes de computadores e segurança digital. As disciplinas visam preparar os estudantes para o mercado de trabalho, proporcionando uma visão abrangente sobre as principais áreas da informática.
-
-Além da teoria, o curso é fortemente focado em práticas laboratoriais, onde os alunos podem aplicar o que aprenderam em situações reais e projetos. Com uma infraestrutura moderna e professores qualificados, a escola incentiva os alunos a desenvolverem habilidades técnicas e a explorarem o raciocínio lógico, essencial para a resolução de problemas. O curso também incentiva a participação em feiras e eventos tecnológicos, promovendo uma imersão no ambiente profissional e abrindo portas para estágios e oportunidades na área.            </p>
+            O curso técnico de Informática da EEEP Irmã Ana Zélia da Fonseca oferece uma formação sólida e prática em tecnologia e desenvolvimento de sistemas ao longo de três anos. Os alunos aprendem lógica de programação, desenvolvimento de aplicativos e sites, redes de computadores e segurança digital. O curso foca na aplicação prática, com laboratórios que simulam situações reais, além de contar com uma infraestrutura moderna e professores qualificados. Também incentiva a participação em feiras e eventos tecnológicos, proporcionando aos estudantes uma imersão no mercado de trabalho e oportunidades de estágio.         </p>
             
             
             <section className={Styles.SectionCurso}>

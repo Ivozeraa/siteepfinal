@@ -1,7 +1,7 @@
 .container p{
     width: 85%;
     color: rgb(0, 0, 0);
-    margin: auto;
+    margin: 50px auto ;
     font-size: 1.5rem;
 }
 
@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    margin: 20px;
+    margin: 100px;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -64,7 +64,21 @@
     margin: auto;
     flex-wrap: wrap;
     max-width: 75%;
+    
 
+
+}
+
+.Bloco{
+    background-color: var(--tom-verde2);
+    padding: 50px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+
+}
+
+.TituloMotivo{
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
 }
 
 .cardM{
@@ -95,6 +109,10 @@
 
     .cardM{
         width: 180px;
+    }
+
+    .TituloMotivo{
+        font-size: 1.5rem;
     }
     
 }

@@ -4,14 +4,15 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-
 }
 
 .carrosselContainer img {
   width: 100%; 
   height: 33rem; 
   object-fit: cover;
-  filter: brightness(50%) blur(2px);
+  overflow: hidden;
+
+  filter: brightness(50%) blur(1.2px);
 }
 
 .titulo {
@@ -30,12 +31,9 @@
   color: var(--tom-verde);
 }
 
-
-
 .desc{
   position: absolute;
   top: 70%;
-  
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
