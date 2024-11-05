@@ -10,6 +10,8 @@ import AM from "../components/Imgs/OIP (1).jpg"
 import AS from "../components/Imgs/R (1).jpg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { FAQ } from "../components/FAQ"
+
 export function Home(){
     return(
         <>
@@ -94,7 +96,7 @@ export function Home(){
                         </div>
                 </div>
 
-                
+                <FAQ />
 
                 
             </div>

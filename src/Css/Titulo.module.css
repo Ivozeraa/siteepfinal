@@ -6,6 +6,11 @@
     width: 80%;
     border-radius: 0 50px 50px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    border-right: solid 7px var(--tom-laranja);
+    border-bottom: solid 7px var(--tom-laranja);
+    border-top: solid 7px var(--tom-laranja);
+
+    
 }
 
 @media (max-width: 768px){

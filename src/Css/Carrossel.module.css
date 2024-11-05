@@ -25,6 +25,7 @@
   text-align: center;
   text-shadow: 1px 3px 4px black;
   z-index: 10;
+  width: 100%;
 }
 
 .titulo span {
@@ -39,6 +40,7 @@
   z-index: 10;
   text-align: center;
   color: rgb(255, 255, 255);
+  width: 90%;
 }
 
 @media (max-width: 768px) {
@@ -59,7 +61,7 @@
 
 @media (max-width: 768px) {
   .carrosselContainer img{
-    height: 45rem;
+    height: 40rem;
   }
 
   .titulo {
