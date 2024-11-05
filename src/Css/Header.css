@@ -96,8 +96,11 @@ nav ul {
     border: 2px double var(--tom-laranja);
     border-radius: 10px;
     opacity: 0;
-    display: none;
-    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li {
@@ -138,10 +141,9 @@ nav ul li a:hover {
 }
 
 .showList {
-    height: 210px;
     opacity: 1;
-    overflow: hidden;
-    display: block;
+    max-height: 210px;
+    transform: translateY(0);
 }
 
 .user-profile {

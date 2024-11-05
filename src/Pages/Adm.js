@@ -10,9 +10,7 @@ export function Adm() {
                 Curso Técnico em <span>Administração</span>
             </h1>
             <p className={Styles.SobreCurso}>
-            O curso técnico em Administração da EEEP Irmã Ana Zélia da Fonseca prepara os estudantes para lidar com as principais funções administrativas em empresas e organizações. Durante o curso, os alunos desenvolvem habilidades em áreas como gestão de pessoas, finanças, marketing e logística, aprendendo a planejar e executar processos essenciais para o funcionamento de um negócio. Essa formação técnica oferece uma base sólida para que os estudantes possam entrar no mercado de trabalho diretamente ao final do curso ou prosseguir em uma graduação.
-
-Com uma abordagem prática, o curso conta com atividades que simulam situações reais no ambiente administrativo, como projetos de empreendedorismo e exercícios de controle financeiro. A escola também incentiva a participação em feiras e eventos de negócios, permitindo que os alunos desenvolvam habilidades de liderança e comunicação, essenciais para o sucesso na área. Dessa forma, o curso técnico em Administração capacita os estudantes a assumirem responsabilidades na gestão de empresas, seja em microempreendimentos, grandes corporações ou no setor público.</p>
+            O curso técnico em Administração da EEEP Irmã Ana Zélia da Fonseca prepara os alunos para atuar nas funções administrativas de empresas, abordando áreas como gestão de pessoas, finanças, marketing e logística. Com uma abordagem prática, o curso inclui atividades como projetos de empreendedorismo e controle financeiro, além de participação em feiras e eventos de negócios. A formação oferece uma base sólida para o mercado de trabalho ou para continuidade em uma graduação.</p>
             
             
             <section className={Styles.SectionCurso}>
@@ -22,10 +20,10 @@ Com uma abordagem prática, o curso conta com atividades que simulam situações
 
                     <h2 className={Styles.SubtituloDisciplinas}>Primeiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
-                        <li className={Styles.ItemDisciplinas}>HTML e CSS</li>
-                        <li className={Styles.ItemDisciplinas}>Lógica de Programação</li>
-                        <li className={Styles.ItemDisciplinas}>Arquitetura e Manutenção de Computadores</li>
-                        <li className={Styles.ItemDisciplinas}>Planejamento de Carreira</li>
+                        <li className={Styles.ItemDisciplinas}>Contabilidade Aplicada</li>
+                        <li className={Styles.ItemDisciplinas}>Direito Empresarial</li>
+                        <li className={Styles.ItemDisciplinas}>Estratégias de Marketing</li>
+                        <li className={Styles.ItemDisciplinas}>ARH</li>
                     </ul>
 
                     <h2 className={Styles.SubtituloDisciplinas}>Segundo Ano:</h2>
@@ -43,12 +41,7 @@ Com uma abordagem prática, o curso conta com atividades que simulam situações
                     </ul>
                 </div>
 
-                <div className={Styles.LabsCurso}>
-                    <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
-                    <div className={Styles.ImgsLabs}>
-                        <h1>*Não encontrado*</h1>
-                    </div>
-                </div>
+                
             </section>
 
             <div className={Styles.ProfessoresCurso}>

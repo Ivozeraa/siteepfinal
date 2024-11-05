@@ -26,33 +26,38 @@ export function Home(){
 
                     <div className={Styles.motivos}>
                         <div className={Styles.cardM}>
-                            <FontAwesomeIcon icon={faTrophy}/>
+                            <FontAwesomeIcon className={Styles.IconM} icon={faTrophy}/>
                             <h3>Melhor escola da CREDE-20</h3>
                         </div>
 
                         <div className={Styles.cardM}>
-                            <FontAwesomeIcon icon={faBook}/>
+                            <FontAwesomeIcon  className={Styles.IconM} icon={faBook}/>
                             <h3>Profissionais qualificados</h3>
                         </div>
 
                         <div className={Styles.cardM}>
-                            <FontAwesomeIcon icon={faWrench}/>
+                            <FontAwesomeIcon className={Styles.IconM} icon={faWrench}/>
                             <h3>Cursos técnicos</h3>
                         </div>
 
                         <div className={Styles.cardM}>
-                        <FontAwesomeIcon icon={faSchool}/>
-                            <h3>infraestrutura e recursos</h3>
+                        <FontAwesomeIcon className={Styles.IconM} icon={faSchool}/>
+                            <h3>infraestrutura e recursos de qualidade</h3>
                         </div>
 
                         <div className={Styles.cardM}>
-                            <FontAwesomeIcon icon={faBriefcase}/>
+                            <FontAwesomeIcon  className={Styles.IconM} icon={faBriefcase}/>
                             <h3>Bolsa estágio</h3>
                         </div>
 
                         <div className={Styles.cardM}>
-                            <FontAwesomeIcon icon={faProjectDiagram}/>
+                            <FontAwesomeIcon className={Styles.IconM} icon={faProjectDiagram}/>
                             <h3>Projetos interdisciplinares</h3>
+                        </div>
+
+                        <div className={Styles.cardM}>
+                            <FontAwesomeIcon className={Styles.IconM} icon={faProjectDiagram}/>
+                            <h3>Integração ao mercado de trabalho</h3>
                         </div>
                     </div>
                 </div>

@@ -57,7 +57,11 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .carrosselContainer img{
+    height: 45rem;
+  }
+
   .titulo {
     font-size: 2rem;
     padding: 5px;
