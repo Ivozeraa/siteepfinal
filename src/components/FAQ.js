@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'; 
 import Styles from '../Css/FAQ.module.css';
 import Titulo from '../components/Titulo';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -47,14 +48,21 @@ export function FAQ() {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  }, []);
+
   return (
     <div className={Styles.faqContainer}>
-        <Titulo titulo="Perguntas Frequentes (FAQ)"/>
-        
+      <Titulo titulo="Perguntas Frequentes (FAQ)" />
+      
       <div className={Styles.faqList}>
-        
         {questions.map((item, index) => (
-          <div key={index} className={Styles.faqItem}>
+          <div key={index} className={Styles.faqItem} data-aos="fade-up">
             <button 
               className={Styles.faqQuestion}
               onClick={() => toggleAnswer(index)}
@@ -62,11 +70,11 @@ export function FAQ() {
               {item.question}
               <FontAwesomeIcon 
                 className={Styles.faqIcon}
-                icon={activeIndex === index ? faChevronUp : faChevronDown} // Alternando entre seta para cima e para baixo
+                icon={activeIndex === index ? faChevronUp : faChevronDown}
               />
             </button>
             {activeIndex === index && (
-              <p className={Styles.faqAnswer}>{item.answer}</p>
+              <p className={Styles.faqAnswer} >{item.answer}</p>
             )}
           </div>
         ))}

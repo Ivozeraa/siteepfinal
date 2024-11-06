@@ -4,7 +4,7 @@ import { auth, db } from '../../Services/firebase';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { setDoc, doc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
-import './LoginRegister.css';
+import './LoginRegister.module.css';
 
 export const Register = () => {
   const [email, setEmail] = useState('');

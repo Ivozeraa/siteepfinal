@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope, faCrown } from '@fortawesome/free-solid-svg-icons';
 import { auth } from '../Services/firebase'; 
 import styles from "../Css/Header.css"; 
+
 
 export function Header() {
     const [showList, setShowList] = useState(false);
@@ -78,6 +79,10 @@ export function Header() {
                             </li>
                         </ul>
                     </div>
+
+                    <a href="/ranking" className="option"> 
+                        <FontAwesomeIcon icon={faCrown} />
+                    </a>
                     
                     {user ? (
                         <div className="user-profile">

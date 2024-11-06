@@ -1,0 +1,31 @@
+.Ranking {
+    font-family: Arial, sans-serif;
+}
+
+.Table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 50px auto ;
+}
+
+.Thead {
+    background-color: var(--tom-verde);
+    color: white;
+}
+
+.Tr {
+    
+}
+
+.Td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.Th {
+    padding: 10px;
+    background-color: #e6e6e6;
+    text-align: left;
+    border: 1px solid #ddd;
+}

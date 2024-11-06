@@ -4,7 +4,7 @@ import { auth, db } from '../../Services/firebase';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore'; 
-import './LoginRegister.css';
+import Styles from "./LoginRegister.module.css";
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -51,7 +51,7 @@ export const Login = () => {
 
   return (
     <>
-      <div className="login-container">
+      <div className={Styles.loginContainer}>
         <h2>Login</h2>
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleLogin}>

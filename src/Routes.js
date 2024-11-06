@@ -4,6 +4,7 @@ import { Informatica } from './Pages/Informatica';
 import { Eletro } from './Pages/Eletro';
 import { Adm } from './Pages/Adm';
 import { Enfer } from './Pages/Enfer';
+import { Ranking } from './Pages/Ranking'
 import { DefaultLayout } from './Layouts/DefaultLayout';
 import { Login } from './Pages/Login/Login';
 import { Register } from './Pages/Login/Register';
@@ -21,6 +22,8 @@ export function Router() {
                 <Route path="/enfer" element={<Enfer />} />
                 <Route path="/eletro" element={<Eletro />} />
                 <Route path="/informatica" element={<Informatica />} />
+                <Route path="/ranking" element={<Ranking />} />
+
                 
                 <Route 
                   path="/index" 
