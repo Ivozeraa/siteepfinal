@@ -59,8 +59,9 @@ export function Home(){
 
                         <div className={Styles.cardM}>
                             <FontAwesomeIcon className={Styles.IconM} icon={faProjectDiagram}/>
-                            <h3>Integração ao mercado de trabalho</h3>
+                            <h3>Preparação para o mercado de trabalho</h3>
                         </div>
+
                     </div>
                 </div>
                
