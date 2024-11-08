@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Styles from '../Css/Carrossel.module.css';
+import { useSpring, animated } from '@react-spring/web';
 
 export function Carrossel(props) {
   const settings = {
@@ -14,6 +15,13 @@ export function Carrossel(props) {
     arrows: true,     // Mostrar botões de próxima/anterior
     draggable: false,
   };
+
+  // Efeito de fade-in para o título
+  const fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    config: { duration: 1000 }, // Duracao do efeito (1 segundo)
+  });
 
   return (
     <div className={Styles.carrosselContainer}>
@@ -28,8 +36,15 @@ export function Carrossel(props) {
           <img src={props.imagem3} alt="Descrição da Imagem 3" />
         </div>
       </Slider>
-      <h1 className={Styles.titulo}>Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span></h1>
-      <p className={Styles.desc}><strong>Transformando vidas por meio da educação e da formação profissional.</strong></p>
+
+      {/* Aplicando o efeito de fade-in ao título */}
+      <animated.h1 className={Styles.titulo} style={fadeIn}>
+        Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span>
+      </animated.h1>
+      
+      <animated.p className={Styles.desc} style={fadeIn}>
+        <strong>Transformando vidas por meio da educação e da formação profissional.</strong>
+      </animated.p>
     </div>
   );
 }
