@@ -37,9 +37,8 @@ export function Carrossel(props) {
         </div>
       </Slider>
 
-      {/* Aplicando o efeito de fade-in ao título */}
       <animated.h1 className={Styles.titulo} style={fadeIn}>
-        Bem-vindo ao site da <span>EEEP Irmã Ana Zélia da Fonseca</span>
+        Bem-vindo ao site da <br/> <span>EEEP Irmã Ana Zélia da Fonseca</span>
       </animated.h1>
       
       <animated.p className={Styles.desc} style={fadeIn}>

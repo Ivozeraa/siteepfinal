@@ -141,8 +141,8 @@
         flex-wrap: nowrap;
         margin: 50px auto;
         img{
-            width: 15rem;
-            height: 10rem;
+            width: 200px;
+            height: rem;
         }   
     }
 
