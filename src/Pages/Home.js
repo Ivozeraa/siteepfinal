@@ -12,7 +12,7 @@ import RA from "../components/Imgs/R.jpg";
 import AM from "../components/Imgs/OIP (1).jpg";
 import AS from "../components/Imgs/R (1).jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
 import { FAQ } from "../components/FAQ";
 
 export function Home() {
@@ -60,8 +60,12 @@ export function Home() {
                         <h3>Projetos interdisciplinares</h3>
                     </div>
                     <div data-aos="flip-left" className={Styles.cardM}>
-                        <FontAwesomeIcon className={Styles.IconM} icon={faProjectDiagram} />
+                        <FontAwesomeIcon className={Styles.IconM} icon={faTools} />
                         <h3>Preparação para o mercado de trabalho</h3>
+                    </div>
+                    <div data-aos="flip-left" className={Styles.cardM}>
+                        <FontAwesomeIcon className={Styles.IconM} icon={faCogs} />
+                        <h3>Aulas práticas em laboratórios</h3>
                     </div>
                 </div>
             </div>

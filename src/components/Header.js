@@ -1,16 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope, faCrown } from '@fortawesome/free-solid-svg-icons';
 import { auth } from '../Services/firebase'; 
 import styles from "../Css/Header.css"; 
 
-
 export function Header() {
     const [showList, setShowList] = useState(false);
     const [user, setUser] = useState(null);
+    const listRef = useRef(null);
+    const buttonRef = useRef(null);
 
     const toggleList = () => {
         setShowList(!showList);
+    };
+
+    const closeList = (event) => {
+        if (listRef.current && !listRef.current.contains(event.target) && !buttonRef.current.contains(event.target)) {
+            setShowList(false);
+        }
+    };
+
+    const handleScroll = () => {
+        if (showList) {
+            setShowList(false);
+        }
     };
 
     useEffect(() => {
@@ -27,6 +40,15 @@ export function Header() {
         return () => unsubscribe();
     }, []);
 
+    useEffect(() => {
+        document.addEventListener('mousedown', closeList);
+        document.addEventListener('scroll', handleScroll);
+        return () => {
+            document.removeEventListener('mousedown', closeList);
+            document.removeEventListener('scroll', handleScroll);
+        };
+    }, [showList]);
+
     return (
         <div className={styles.Header}>
             <div className='imgPrincipal'> </div>
@@ -40,11 +62,11 @@ export function Header() {
                     </a>
 
                     <div style={{ position: 'relative' }}>
-                        <button onClick={toggleList} className={"option"}>
+                        <button onClick={toggleList} className="option" ref={buttonRef}>
                             <FontAwesomeIcon icon={faGraduationCap} />
                         </button>
                         
-                        <ul className={showList ? 'showList' : ''}>
+                        <ul className={showList ? 'showList' : ''} ref={listRef}>
                             <li>
                                 <a href="/Adm">
                                     <div className='curso'>

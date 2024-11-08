@@ -65,11 +65,11 @@ export function Informatica() {
                 <div className={Styles.ProfCursoDiv}>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.CPCardProf}>Professor</h3>
+                        <h3 className={Styles.TitleCardProf}>Walter Jr.</h3>
                     </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.CPCardProf}>Professor</h3>
+                        <h3 className={Styles.TitleCardProf}>Lineker Vidal</h3>
                     </div>
                 </div>
             </div>

@@ -127,14 +127,11 @@
         text-align: center;
         color: var(--white);
         height: 300px;
-        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s, box-shadow 0.3s;
         text-align: start;
-    }
-
-    .CardProf:hover {
-        transform: translateY(-5px);
-        box-shadow: 6px 6px 40px rgba(0, 0, 0, 0.4);
+        .TitleCardProf{
+            margin-left: 10px;
+        }
     }
 }
 
