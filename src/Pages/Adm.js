@@ -57,7 +57,7 @@ export function Adm() {
                 <div className={Styles.ProfCursoDiv}>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.TitleCardProf}>Professor</h3>
+                        <h3 className={Styles.TitleCardProf}>Marcos Antônio</h3>
                     </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />

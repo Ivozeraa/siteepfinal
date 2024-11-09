@@ -2,13 +2,13 @@
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    margin: 50px auto ;
+    align-items: flex-start;
+    margin: 50px auto;
     padding: 1.5rem;
 }
 
 .NomeCurso {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
@@ -18,33 +18,30 @@
 }
 
 .SobreCurso {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-color);
     line-height: 1.6;
     margin-bottom: 2rem;
-    padding: 0 1rem;
 }
 
 .DisciplinasCurso {
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 0;
     margin: auto;
 }
 
 .TituloDisciplina {
     margin: 0;
     display: flex;
-    font-size: 2.5rem;
     color: var(--black);
     font-weight: bold;
     width: 80%;
 }
 
-.SectionCurso{
+.SectionCurso {
     display: flex;
     max-width: 100%;
 }
-
 
 .SubtituloDisciplinas {
     font-size: 1.5rem;
@@ -60,7 +57,7 @@
 }
 
 .ItemDisciplinas {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-color);
     background-color: var(--background2);
     padding: 0.1rem 1rem;
@@ -71,15 +68,13 @@
 .LabsCurso {
     margin-top: 2rem;
     text-align: center;
-    
 }
 
 .LabCursoTitulo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--tom-preto);
     margin-bottom: 1rem;
-    
 }
 
 .ImgsLabs {
@@ -102,73 +97,96 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    .ProfCursoTitulo {
-        text-shadow: -2px 2px 0 var(--tom-verde2);
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    .ProfCursoDiv {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        margin: 50px;
-    }
-
-    .ImgProfs {
-        width: 250px;
-        height: 250px;
-        border-radius: 5px 5px 0 0;
-        transition: transform 0.3s;
-    }
-
-    .CardProf {
-        font-size: 1rem;
-        background: linear-gradient(135deg, var(--tom-verde) 30%, var(--tom-verde2) 100%);
-        border-radius: 5px;
-        text-align: center;
-        color: var(--white);
-        height: 300px;
-        transition: transform 0.3s, box-shadow 0.3s;
-        text-align: start;
-        margin: 0 10px;
-        .TitleCardProf{
-            margin-left: 10px;
-        }
-    }
+    max-width: 500px;
+    margin: auto;
 }
 
+.ProfCursoTitulo {
+    font-size: 2rem;
+}
 
-@media (max-width: 768px){
-    .ImgsLabs{
+.ProfCursoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+
+.ImgProfs {
+    width: 10rem;
+    border-radius: 5px 0 0 5px;
+    transition: transform 0.3s;
+}
+
+.TitleCardProf {
+    margin: 10px;
+}
+
+.CardProf {
+    display: flex;
+    font-size: 1rem;
+    background: linear-gradient(135deg, var(--tom-verde) 30%, var(--tom-verde2) 100%);
+    border-radius: 5px;
+    color: var(--white);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: start;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .ContainerCurso {
+        font-size: 1rem;
+    }
+
+    .NomeCurso{
+        font-size: 1.5rem;
+    }
+
+    .SobreCurso{
+        font-size: 0.8rem;
+    }
+
+    .ImgsLabs {
         flex-wrap: nowrap;
         margin: 50px auto;
-        img{
-            width: 150px;
-            height: 150px;
-        }   
     }
 
-    .TituloDisciplina{
-        font-size: 2rem;
-
+    .ImgsLabs img {
+        width: 140px;
+        height: 140px;
     }
 
-    .SectionCurso{
-        display: flex;
+    .TituloDisciplina {
+        font-size: 1.5rem;
+    }
+
+    .SectionCurso {
         flex-direction: column;
     }
 
-    .ProfessoresCurso{
-        .ImgProfs{
-            width: 150px;
-            height: 150px;
-        }
+    .ProfessoresCurso {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
-        .CardProf{
-            height: 180px;
-            font-size: 0.8rem;
-        }
+    .ProfCursoTitulo{
+        font-size: 1.5rem;
+    }
+
+    .ProfCursoDiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ImgProfs {
+        width: 150px;
+        height: 150px;
+    }
+
+    .CardProf {
+        width: 90%;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
     }
 }

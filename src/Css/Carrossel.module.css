@@ -1,6 +1,5 @@
 .carrosselContainer {
   margin: 0;
-  padding: ;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -12,7 +11,7 @@
   object-fit: cover;
   overflow: hidden;
   filter: brightness(50%) blur(1.2px);
-  
+
 }
 
 .titulo {
