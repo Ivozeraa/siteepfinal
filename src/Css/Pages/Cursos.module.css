@@ -27,7 +27,6 @@
 .DisciplinasCurso {
     width: 100%;
     padding: 2rem 0;
-    margin: auto;
 }
 
 .TituloDisciplina {
@@ -40,6 +39,7 @@
 
 .SectionCurso {
     display: flex;
+    margin: auto;
     max-width: 100%;
 }
 
@@ -66,8 +66,7 @@
 }
 
 .LabsCurso {
-    margin-top: 2rem;
-    margin: auto;
+    margin: 2rem auto;
     text-align: center;
 }
 
@@ -99,7 +98,7 @@
     align-items: center;
     justify-content: space-between;
     max-width: 500px;
-    margin: auto;
+    margin: 50px auto;
 }
 
 .ProfCursoTitulo {
@@ -144,7 +143,7 @@
     }
 
     .SobreCurso{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .ImgsLabs {
