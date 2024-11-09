@@ -12,6 +12,7 @@
   object-fit: cover;
   overflow: hidden;
   filter: brightness(50%) blur(1.2px);
+  
 }
 
 .titulo {
