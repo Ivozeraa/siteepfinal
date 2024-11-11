@@ -50,42 +50,42 @@ export const Login = () => {
   };
 
   return (
-    <>
-      <div className={Styles.loginContainer}>
-        <h2>Login</h2>
-        {error && <div className="error-message">{error}</div>}
-        <form onSubmit={handleLogin}>
+    <div className={Styles.loginContainer}>
+      <h2>Login</h2>
+      {error && <div className={Styles.errorMessage}>{error}</div>}
+      <form onSubmit={handleLogin}>
+        <input
+          className={Styles.input}
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        
+        <div className={Styles.passwordContainer}>
           <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            className={Styles.input}
+            type={showPassword ? 'text' : 'password'}
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
-          
-          <div className="password-container">
-            <input
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Senha"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <span
-              className="password-toggle"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </span>
-          </div>
-          
-          <button type="submit" className='botaoSub'>Entrar</button>
-        </form>
-        <button className="google-login" onClick={handleGoogleLogin}>
-          Entrar com Google
-        </button>
-        <div className="register-link">
-          <span>Não tem conta? <a href="/registro">Registre-se</a></span>
+          <span
+            className={Styles.passwordToggle}
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
         </div>
+        
+        <button type="submit" className={Styles.botaoSub}>Entrar</button>
+      </form>
+      <button className={Styles.googleLogin} onClick={handleGoogleLogin}>
+        Entrar com Google
+      </button>
+      <div className={Styles.registerLink}>
+        <span>Não tem conta? <a href="/registro">Registre-se</a></span>
       </div>
-    </>
+    </div>
   );
 };

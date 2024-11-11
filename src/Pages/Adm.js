@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
-import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
-import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
 import WJ from "../components/Imgs/artworks-vNUW982wb0nAMhW7-Vk4qfA-t1080x1080.jpg";
 
 export function Adm() {
