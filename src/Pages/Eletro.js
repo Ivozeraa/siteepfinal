@@ -67,11 +67,16 @@ export function Eletro() {
                 <div className={Styles.ProfCursoDiv}>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.TitleCardProf}>Professor</h3>
-                    </div>
+                        <div className={Styles.InforProf}>
+                            <h3 className={Styles.TitleCardProf}>Tobias Tavares</h3>
+                            <p className={Styles.SubtitleCardProf}>Coordenador do Curso</p>
+                        </div>                        </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.TitleCardProf}>Professor</h3>
+                        <div className={Styles.InforProf}>
+                            <h3 className={Styles.TitleCardProf}></h3>
+                            <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>
+                        </div>    
                     </div>
                 </div>
             </div>

@@ -122,15 +122,22 @@
     margin: 10px;
 }
 
+.SubtitleCardProf{
+    padding-left: 15px;
+    color: rgb(220, 220, 220);
+}
+
 .CardProf {
     display: flex;
     font-size: 1rem;
+    width: 23rem;
     background: linear-gradient(135deg, var(--tom-verde) 30%, var(--tom-verde2) 100%);
     border-radius: 5px;
     color: var(--white);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: start;
     margin: 0 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -154,6 +161,10 @@
     .ImgsLabs img {
         width: 140px;
         height: 140px;
+    }
+
+    .IlustracaoCurso{
+        display: none;
     }
 
     .TituloDisciplina {
@@ -181,7 +192,7 @@
 
     .ImgProfs {
         width: 150px;
-        height: 150px;
+        height: 100%;
     }
 
     .CardProf {

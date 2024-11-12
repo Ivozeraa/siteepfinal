@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
 import WJ from "../components/Imgs/Frente1.jpeg";
+import AdmFoto from "../components/Imgs/admFoto.webp"
 
 export function Adm() {
     useEffect(() => {
@@ -48,6 +49,9 @@ export function Adm() {
                         <li className={Styles.ItemDisciplinas}>Profissão e Formação</li>
                     </ul>
                 </div>
+                <div className={Styles.IlustracaoCurso} data-aos="fade-up">
+                    <img src={AdmFoto}/>
+                </div>
             </section>
 
             <div className={Styles.ProfessoresCurso} data-aos="fade-up">
@@ -55,11 +59,17 @@ export function Adm() {
                 <div className={Styles.ProfCursoDiv}>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.TitleCardProf}>Marcos Antônio</h3>
-                    </div>
+                            <div className={Styles.InforProf}>
+                                <h3 className={Styles.TitleCardProf}>Marcos Antônio</h3>
+                                <p className={Styles.SubtitleCardProf}>Coordenador do Curso</p>
+                            </div>                    
+                        </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
-                        <h3 className={Styles.TitleCardProf}>Professor</h3>
+                        <div className={Styles.InforProf}>
+                            <h3 className={Styles.TitleCardProf}>Suiani Amaro</h3>
+                            <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>
+                        </div>                   
                     </div>
                 </div>
             </div>
