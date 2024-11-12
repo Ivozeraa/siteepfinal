@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { getCurrentUserRole } from './AuthService'; // Importe o serviço
+import { getCurrentUserRole } from './AuthService'; 
+
+//Não mexe nessa bagaça, tá funcionado 
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const [userRole, setUserRole] = useState(null);

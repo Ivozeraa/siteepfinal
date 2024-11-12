@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
 import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
 import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
-import WJ from "../components/Imgs/artworks-vNUW982wb0nAMhW7-Vk4qfA-t1080x1080.jpg";
+import WJ from "../components/Imgs/Frente1.jpeg";
 
 export function Enfer() {
     useEffect(() => {

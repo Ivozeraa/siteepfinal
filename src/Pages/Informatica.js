@@ -4,7 +4,8 @@ import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
 import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
 import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
-import WJ from "../components/Imgs/artworks-vNUW982wb0nAMhW7-Vk4qfA-t1080x1080.jpg";
+import WJ from "../components/Imgs/walter.png";
+import LV from "../components/Imgs/lineker.png";
 
 export function Informatica() {
     useEffect(() => {
@@ -68,7 +69,7 @@ export function Informatica() {
                         <h3 className={Styles.TitleCardProf}>Walter Jr.</h3>
                     </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
-                        <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
+                        <img className={Styles.ImgProfs} src={LV} alt="Professor" />
                         <h3 className={Styles.TitleCardProf}>Lineker Vidal</h3>
                     </div>
                 </div>
