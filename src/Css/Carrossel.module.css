@@ -1,6 +1,5 @@
 .carrosselContainer {
   margin: 0;
-  padding: 0;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -10,7 +9,8 @@
   width: 100%; 
   height: 33rem; 
   object-fit: cover;
-  filter: brightness(50%);
+  overflow: hidden;
+  filter: brightness(50%) blur(1.2px);
 
 }
 
@@ -24,26 +24,22 @@
   text-align: center;
   text-shadow: 1px 3px 4px black;
   z-index: 10;
+  width: 100%;
 }
 
 .titulo span {
   color: var(--tom-verde);
-  text-shadow: 
-    0px 0px 5px rgba(103, 255, 103, 0.9),
-    0px 0px 10px rgb(0, 255, 0);
 }
-
-
 
 .desc{
   position: absolute;
   top: 70%;
-  
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
   text-align: center;
   color: rgb(255, 255, 255);
+  width: 90%;
 }
 
 @media (max-width: 768px) {
@@ -62,10 +58,13 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .carrosselContainer img{
+    height: 40rem;
+  }
+
   .titulo {
-    font-size: 2rem;
-    padding: 5px;
+    font-size: 1.4rem;
   }
 
   img {

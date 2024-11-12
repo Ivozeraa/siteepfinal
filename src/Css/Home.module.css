@@ -1,16 +1,19 @@
 .container p{
     width: 85%;
     color: rgb(0, 0, 0);
-    margin: auto;
+    margin: 50px auto ;
+    font-size: 1.5rem;
 }
 
 .gestao{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     text-align: center;
-    margin: 20px;
+    margin: 50px auto;
+    max-width: 100%;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -23,6 +26,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: solid 2px var(--tom-laranja);
+    margin: 0 5px;
+    
   
     .foto{
         background-color: var(--tom-verde2);
@@ -50,21 +57,76 @@
     
 }
 
+.motivos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 75%;
+}
+
+.Bloco{
+    background-color: var(--tom-verde2);
+    padding: 100px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+.TituloMotivo{
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+.cardM{
+    background-color: black;
+    height: 200px;
+    width: 220px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: var(--tom-verde);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: solid 2px var(--tom-laranja);
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    .IconM{
+        color: var(--tom-laranja);
+        scale: 1.5;
+    }
+
+    :last-child{
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 768px){
+    .container p{
+        font-size: 1rem;
+    }
     .card{
-        height: 200px;
-        width: 100px;
-        gap: 1rem;
-        img{
-            width: 50px;
-            height: 50px;
-            margin-top: 45px;
+        width: 140px;
+        height: 210px;
+        font-size: 0.8rem;
+    }
 
-        }
+    .motivos{
+        max-width: 100%;
+    }
 
-        h3, p{
-            font-size: 10px;
-        }
+    .cardM{
+        width: 150px;
+        font-size: 0.7rem;
+        padding: 10px;
+        height: 150px;
+
+    }
+
+    .TituloMotivo{
+        font-size: 1.5rem;
     }
     
 }

@@ -11,7 +11,7 @@ export function Footer() {
                     <a href="https://www.instagram.com/epirmaanazelia?igsh=eHFxNHl0NnNlNjVh" aria-label="Instagram">
                         <FontAwesomeIcon icon={faInstagram} /> 
                     </a>
-                    <a href='#face'>
+                    <a href='https://www.facebook.com/people/EEEP-Irm%C3%A3-Ana-Zelia-da-Fonseca/100067499587093/?sk=about'>
                     <FontAwesomeIcon icon={faFacebook} /> 
                         
                     </a>

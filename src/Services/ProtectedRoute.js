@@ -1,45 +1,38 @@
-// src/Services/ProtectedRoute.js
 import React, { useEffect, useState } from 'react';
-import { auth, db } from './firebase';
-import { doc, getDoc } from 'firebase/firestore';
 import { Navigate } from 'react-router-dom';
+import { getCurrentUserRole } from './AuthService'; 
 
-const ProtectedRoute = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+//Não mexe nessa bagaça, tá funcionado 
+
+const ProtectedRoute = ({ children, allowedRoles }) => {
+  const [userRole, setUserRole] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkUserAuthentication = async () => {
-      const user = auth.currentUser; // Verifica se o usuário está autenticado
-      if (user) {
-        try {
-          // Verifica se o usuário possui um documento no Firestore, mas não verifica o papel
-          const docRef = doc(db, "users", user.uid);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            setIsAuthenticated(true);
-          }
-        } catch (error) {
-          console.error("Erro ao verificar autenticação do usuário:", error);
-        }
+    const fetchUserRole = async () => {
+      try {
+        const role = await getCurrentUserRole();  // Espera o papel ser retornado
+        setUserRole(role);
+      } catch (error) {
+        console.error(error);  // Caso algo dê errado, exibe o erro no console
+        setUserRole(null);  // Defina o papel como null se houver erro
+      } finally {
+        setLoading(false);  // Finaliza o carregamento
       }
-      setLoading(false);
     };
 
-    checkUserAuthentication();
-  }, []);
+    fetchUserRole();  // Chama a função para verificar o papel do usuário
+  }, []);  // O useEffect agora só roda uma vez após o componente ser montado
 
   if (loading) {
     return <p>Carregando...</p>;
   }
 
-  // Se o usuário não estiver autenticado, redireciona para a Home
-  if (!isAuthenticated) {
-    return <Navigate to="/" />;
+  if (!userRole || !allowedRoles.includes(userRole)) {
+    return <Navigate to="/" />;  // Redireciona se o papel não for válido
   }
 
-  // Renderiza o conteúdo protegido se o usuário estiver autenticado
-  return children;
+  return children;  // Caso o papel do usuário seja válido, renderiza os filhos
 };
 
 export default ProtectedRoute;
