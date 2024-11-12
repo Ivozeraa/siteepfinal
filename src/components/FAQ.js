@@ -20,7 +20,7 @@ export function FAQ() {
     },
     {
       question: 'Como posso me matricular na EEEP?',
-      answer: 'As matrículas são feitas no início de cada ano letivo. Fique atento aos comunicados oficiais da escola para informações sobre o processo seletivo.',
+      answer: 'As inscrições se iniciam normalmente perto do fim do ano anterior. Já a matrículas são feitas no início de cada ano letivo. Fique atento aos comunicados oficiais da escola para informações sobre o processo seletivo.',
     },
     {
       question: 'A escola oferece apoio aos alunos?',
@@ -40,7 +40,7 @@ export function FAQ() {
     },
     {
       question: 'Qual o horário de funcionamento da escola?',
-      answer: 'A EEEP funciona de segunda a sexta-feira, das 7h00 às 17h00, com horários variáveis dependendo do turno do aluno.',
+      answer: 'A EEEP funciona de segunda a sexta-feira, das 7h20 às 16h40.',
     },
   ];
 

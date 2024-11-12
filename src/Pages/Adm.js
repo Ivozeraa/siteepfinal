@@ -32,16 +32,24 @@ export function Adm() {
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Contabilidade Aplicada</li>
                         <li className={Styles.ItemDisciplinas}>Direito Empresarial</li>
-                        <li className={Styles.ItemDisciplinas}>Estratégias de Marketing</li>
-                        <li className={Styles.ItemDisciplinas}>ARH</li>
+                        <li className={Styles.ItemDisciplinas}>Fundamentos de Marketing</li>
+                        <li className={Styles.ItemDisciplinas}>Introdução ao Curso Técnico e a Ética Profissional </li>
                     </ul>
 
                     <h2 className={Styles.SubtituloDisciplinas}>Segundo Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
-                        <li className={Styles.ItemDisciplinas}>Gerenciamento de Conteúdo</li>
-                        <li className={Styles.ItemDisciplinas}>Design Gráfico</li>
-                        <li className={Styles.ItemDisciplinas}>Redes de Computadores</li>
-                        <li className={Styles.ItemDisciplinas}>Programação Web</li>
+                        <li className={Styles.ItemDisciplinas}>Administração de Recursos Humanos</li>
+                        <li className={Styles.ItemDisciplinas}>Contabilidade de Custos</li>
+                        <li className={Styles.ItemDisciplinas}>Economia e Mercado</li>
+                        <li className={Styles.ItemDisciplinas}>Teoria Geral da Administração</li>
+                        <li className={Styles.ItemDisciplinas}>Trade Marketing</li>
+                        <li className={Styles.ItemDisciplinas}>Gestão da Qualidade</li>
+                        <li className={Styles.ItemDisciplinas}>Gestão de Departamento Pessoal</li>
+                        <li className={Styles.ItemDisciplinas}>Gestão de Projetos</li>
+                        <li className={Styles.ItemDisciplinas}>Gestão Organizacional</li>
+                        <li className={Styles.ItemDisciplinas}>Técnicas e Atividades Financeiras</li>
+
+
                     </ul>
 
                     <h2 className={Styles.SubtituloDisciplinas}>Terceiro Ano:</h2>
