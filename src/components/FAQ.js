@@ -58,7 +58,7 @@ export function FAQ() {
 
   return (
     <div className={Styles.faqContainer}>
-      <Titulo titulo="Perguntas Frequentes (FAQ)" />
+      <Titulo titulo="Perguntas Frequentes" />
       
       <div className={Styles.faqList}>
         {questions.map((item, index) => (

@@ -154,13 +154,10 @@
     }
 
     .ImgsLabs {
-        flex-wrap: nowrap;
         margin: 50px auto;
-    }
-
-    .ImgsLabs img {
-        width: 140px;
-        height: 140px;
+        img{
+            width: 18rem;
+        }
     }
 
     .IlustracaoCurso{

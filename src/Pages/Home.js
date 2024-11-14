@@ -14,6 +14,7 @@ import AS from "../components/Imgs/aline.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
 import { FAQ } from "../components/FAQ";
+import { CarrosselEventos } from "../components/CarrosselEventos"
 
 export function Home() {
     useEffect(() => {
@@ -69,6 +70,8 @@ export function Home() {
                     </div>
                 </div>
             </div>
+
+            
             <Titulo titulo="Orgão Gestor" />
             <div data-aos="fade-up" className={Styles.gestao}>
                 <div data-aos="zoom-in" className={Styles.card}>
@@ -95,8 +98,21 @@ export function Home() {
                     <h3>Aline Santos</h3>
                     <p>Coordenadora</p>
                 </div>
+
+                
             </div>
+
+            <Titulo titulo="Eventos escolares" />
+
+            <div className={Styles.Eventos}>
+
+                <div className={Styles.CardEventos}>
+                    <CarrosselEventos />
+                </div>
+            </div>
+
             <FAQ />
+            
         </div>
     );
 }
