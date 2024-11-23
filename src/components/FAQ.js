@@ -40,7 +40,7 @@ export function FAQ() {
     },
     {
       question: 'Qual o horário de funcionamento da escola?',
-      answer: 'A EEEP funciona de segunda a sexta-feira, das 7h20 às 16h40.',
+      answer: 'A EEEP funciona de segunda a sexta-feira, das 7h10 às 16h40.',
     },
   ];
 
@@ -58,8 +58,8 @@ export function FAQ() {
 
   return (
     <div className={Styles.faqContainer}>
-      <Titulo titulo="Perguntas Frequentes" />
-      
+      <h1 className={Styles.faqTitle} data-aos="fade-in">Perguntas Frequentes</h1>
+
       <div className={Styles.faqList}>
         {questions.map((item, index) => (
           <div key={index} className={Styles.faqItem} data-aos="fade-up">

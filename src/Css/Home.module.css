@@ -81,8 +81,8 @@
     background-color: black;
     height: 200px;
     width: 220px;
-    margin: 5px;
-    border-radius: 15px;
+    margin: 3px;
+    border-radius: 10px;
     background-color: var(--tom-verde);
     color: var(--white);
     display: flex;
