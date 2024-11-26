@@ -1,5 +1,5 @@
 .container p{
-    width: 85%;
+    width: 75%;
     color: rgb(0, 0, 0);
     margin: 50px auto ;
     font-size: 1.5rem;
@@ -106,6 +106,7 @@
 @media (max-width: 768px){
     .container p{
         font-size: 1rem;
+        width: 85%;
     }
     .card{
         width: 140px;

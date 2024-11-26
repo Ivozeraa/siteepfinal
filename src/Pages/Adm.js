@@ -18,7 +18,7 @@ export function Adm() {
     return (
         <div className={Styles.ContainerCurso}>
             <h1 className={Styles.NomeCurso} data-aos="fade-up">
-                Curso Técnico em <span>Administração</span>
+                Curso Técnico em <span style={{color: 'rgb(0, 0, 200)'}}>Administração</span>
             </h1>
             <p className={Styles.SobreCurso} data-aos="fade-up">
                 O curso técnico em Administração da EEEP Irmã Ana Zélia da Fonseca prepara os alunos para atuar nas funções administrativas de empresas, abordando áreas como gestão de pessoas, finanças, marketing e logística. Com uma abordagem prática, o curso inclui atividades como projetos de empreendedorismo e controle financeiro, além de participação em feiras e eventos de negócios. A formação oferece uma base sólida para o mercado de trabalho ou para continuidade em uma graduação.
@@ -28,7 +28,7 @@ export function Adm() {
                 <div className={Styles.DisciplinasCurso} data-aos="fade-up">
                     <h1 className={Styles.TituloDisciplina}>Disciplinas do Curso</h1>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Primeiro Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(0, 0, 200)'}}>Primeiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Contabilidade Aplicada</li>
                         <li className={Styles.ItemDisciplinas}>Direito Empresarial</li>
@@ -36,7 +36,7 @@ export function Adm() {
                         <li className={Styles.ItemDisciplinas}>Introdução ao Curso Técnico e a Ética Profissional </li>
                     </ul>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Segundo Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(0, 0, 200)'}}>Segundo Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Administração de Recursos Humanos</li>
                         <li className={Styles.ItemDisciplinas}>Contabilidade de Custos</li>
@@ -52,7 +52,7 @@ export function Adm() {
 
                     </ul>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Terceiro Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(0, 0, 200)'}}>Terceiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Laboratório de Software, Web e Hardware</li>
                         <li className={Styles.ItemDisciplinas}>Profissão e Formação</li>

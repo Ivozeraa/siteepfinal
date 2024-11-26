@@ -6,6 +6,7 @@ import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
 import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
 import WJ from "../components/Imgs/Frente1.jpeg";
 import TT from "../components/Imgs/tobias.jpg"
+import PeopleIcon from '../components/Imgs/IconEletro.png'
 
 export function Eletro() {
     useEffect(() => {
@@ -19,8 +20,9 @@ export function Eletro() {
     return (
         <div className={Styles.ContainerCurso}>
             <h1 className={Styles.NomeCurso} data-aos="fade-up">
-                Curso Técnico em <span>Eletrotécnica</span>
+                Curso Técnico em <span style={{color: 'rgb(255, 220, 0)'}}>Eletrotécnica</span>
             </h1>
+            <img src={PeopleIcon}/>
             <p className={Styles.SobreCurso} data-aos="fade-up">
                 O curso técnico em Eletrotécnica da EEEP Irmã Ana Zélia da Fonseca forma profissionais capacitados para atuar em instalações elétricas, automação industrial e manutenção de sistemas elétricos. Com ênfase em circuitos elétricos, eletrônica, sistemas de potência e programação, o curso oferece aulas práticas em laboratórios, permitindo que os alunos apliquem a teoria em projetos reais. A formação prepara os estudantes para o mercado de trabalho ou para prosseguirem em cursos superiores em áreas como Engenharia Elétrica.
             
@@ -30,7 +32,7 @@ export function Eletro() {
                 <div className={Styles.DisciplinasCurso} data-aos="fade-up">
                     <h1 className={Styles.TituloDisciplina}>Disciplinas do Curso</h1>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Primeiro Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(255, 220, 0)'}}>Primeiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Desenho Técnico</li>
                         <li className={Styles.ItemDisciplinas}>Higiene e Segurança no Trabalho</li>
@@ -38,7 +40,7 @@ export function Eletro() {
                         <li className={Styles.ItemDisciplinas}>Gestão de Qualidade</li>
                     </ul>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Segundo Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(255, 220, 0)'}}>Segundo Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Instalações Elétricas de Baixa Tensão</li>
                         <li className={Styles.ItemDisciplinas}>Comando Elétricos Industrial</li>
@@ -48,7 +50,7 @@ export function Eletro() {
                         <li className={Styles.ItemDisciplinas}>Controlador Lógico Programável</li>
                     </ul>
 
-                    <h2 className={Styles.SubtituloDisciplinas}>Terceiro Ano:</h2>
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(255, 220, 0)'}}>Terceiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
                         <li className={Styles.ItemDisciplinas}>Laboratório de Software, Web e Hardware</li>
                         <li className={Styles.ItemDisciplinas}>Profissão e Formação</li>

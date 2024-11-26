@@ -141,6 +141,12 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.IlustracaoCurso{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .ContainerCurso {
         font-size: 1rem;
