@@ -77,6 +77,7 @@ export function Informatica() {
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Lineker Vidal</h3>
                             <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>
+                            <p className={Styles.SubtitleCardProf}>Vendedor de Iphone</p>
                         </div>
                     </div>
                 </div>
