@@ -1,15 +1,10 @@
 .H1Titulo{
-    text-align: center;
-    margin: 50px 0 50px 0;
-    padding: 7px;
-    color: rgb(255, 255, 255);
-    background-color: var(--tom-verde);
-    width: 80%;
-    border-radius: 0 50px 50px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-    border-right: solid 2px var(--tom-laranja);
-    border-bottom: solid 2px var(--tom-laranja);
-    border-top: solid 2px var(--tom-laranja);
+    padding-top: 50px;
+    border-bottom: solid 3px var(--tom-laranja);
+    width: 90%;
+    padding-bottom: 5px;
+    margin: auto;
+    color: var(--tom-verde);
 }
 
 @media (max-width: 768px){

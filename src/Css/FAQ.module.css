@@ -23,7 +23,7 @@
   }
   
   .faqItem {
-    background-color: #fff;
+    background-color: var(--tom-verde2);
     padding: 15px;
     margin: 15px;
     border-radius: 8px;
@@ -53,7 +53,8 @@
   .faqAnswer {
     margin-top: 15px;
     font-size: 1rem;
-    color: #555;
+    color: #ffffff;
+    background-color: var(--tom-verde2);
     line-height: 1.5;
     text-align: left;
   }
@@ -61,6 +62,7 @@
   .faqIcon {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
+    color: var(--tom-laranja);
   }
   
   .faqItem button:focus {

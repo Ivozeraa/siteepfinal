@@ -14,7 +14,6 @@ import AS from "../components/Imgs/aline.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
 import { FAQ } from "../components/FAQ";
-import { CarrosselEventos } from "../components/CarrosselEventos"
 
 export function Home() {
     useEffect(() => {
@@ -34,7 +33,7 @@ export function Home() {
                 <p>A Escola Profissionalizante Irmã Ana Zélia da Fonseca tem como objetivo oferecer formação técnica e profissional de qualidade, preparando os alunos para o mercado de trabalho. Através de um currículo diversificado e voltado para as demandas do setor, a escola busca desenvolver habilidades práticas e teóricas, além de promover valores como ética, cidadania e responsabilidade social. A instituição também visa fomentar a inclusão social e o empoderamento dos estudantes, contribuindo para a construção de uma sociedade mais justa e equitativa.</p>
             </div>
             <div data-aos="fade-up" className={Styles.Bloco}>
-                <h1 className={Styles.TituloMotivo}>Motivos para estudar em nossa escola</h1>
+                <h1 className={Styles.TituloMotivo}>Motivos para estudar na EEEP</h1>
                 <div className={Styles.motivos}>
                     <div data-aos="flip-left" className={Styles.cardM}>
                         <FontAwesomeIcon className={Styles.IconM} icon={faTrophy} />
@@ -100,15 +99,6 @@ export function Home() {
                 </div>
 
                 
-            </div>
-
-            <Titulo titulo="Eventos escolares" />
-
-            <div className={Styles.Eventos}>
-
-                <div className={Styles.CardEventos}>
-                    <CarrosselEventos />
-                </div>
             </div>
 
             <FAQ />
