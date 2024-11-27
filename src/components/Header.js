@@ -2,11 +2,15 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope, faCrown } from '@fortawesome/free-solid-svg-icons';
 import { auth } from '../Services/firebase'; 
+import { UserInfoModal } from './UserInforModal'; 
 import styles from "../Css/Header.css"; 
 
 export function Header() {
     const [showList, setShowList] = useState(false);
     const [user, setUser] = useState(null);
+    const [showModal, setShowModal] = useState(false); // Controle do modal
+    const [userPhoto, setUserPhoto] = useState("/default-avatar.png"); // Foto padrão
+
     const listRef = useRef(null);
     const buttonRef = useRef(null);
 
@@ -108,7 +112,12 @@ export function Header() {
                     
                     {user ? (
                         <div className="user-profile">
-                            <img src={user.photoURL} alt={user.name} className="user-icon" />
+                            <img 
+                                src={userPhoto} 
+                                alt={user.name || "Usuário"} 
+                                className="user-icon" 
+                                onClick={() => setShowModal(true)} // Abre o modal
+                            />
                         </div>
                     ) : (
                         <a href="/login" className='login'>
@@ -118,6 +127,13 @@ export function Header() {
                     )}
                 </nav>
             </header>
+
+            {showModal && (
+                <UserInfoModal 
+                    onClose={() => setShowModal(false)} 
+                    setUserPhoto={setUserPhoto} 
+                />
+            )}
         </div>
     );
 }
