@@ -1,99 +1,198 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../Services/firebase';
-import { collection, addDoc, getDocs, doc, updateDoc } from 'firebase/firestore';
+import { collection, getDocs, updateDoc, doc, onSnapshot, deleteDoc } from 'firebase/firestore';
 import Styles from '../../Css/Pages/Admin.module.css';
 
 export function Administracao() {
-  const [professors, setProfessors] = useState([]);
-  const [newProfessor, setNewProfessor] = useState('');
+  const [users, setUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [newRole, setNewRole] = useState('');
   const [rankingData, setRankingData] = useState([]);
   const [newNota, setNewNota] = useState('');
+  const [newCurso, setNewCurso] = useState('');
   const [editingIndex, setEditingIndex] = useState(null);
+  const [modalMessage, setModalMessage] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const fetchProfessors = async () => {
-      const querySnapshot = await getDocs(collection(db, "users"));
-      const profList = [];
-      querySnapshot.forEach((doc) => {
-        if (doc.data().role === 'professor') {
-          profList.push(doc.data());
-        }
-      });
-      setProfessors(profList);
-    };
-
-    const fetchRanking = async () => {
-      const querySnapshot = await getDocs(collection(db, 'ranking'));
-      const ranking = querySnapshot.docs.map(doc => ({
+    const fetchUsers = async () => {
+      const querySnapshot = await getDocs(collection(db, 'users'));
+      const userList = querySnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
       }));
-      setRankingData(ranking);
+      setUsers(userList);
     };
 
-    fetchProfessors();
+    const fetchRanking = () => {
+      const unsubscribe = onSnapshot(collection(db, 'ranking'), (snapshot) => {
+        const ranking = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setRankingData(ranking);
+      });
+
+      return () => unsubscribe();
+    };
+
+    fetchUsers();
     fetchRanking();
   }, []);
 
-  const handleAddProfessor = async () => {
+  const handleAssignRole = async () => {
+    if (!selectedUser || !newRole) {
+      alert('Selecione um usuário e um cargo válido.');
+      return;
+    }
+
     try {
-      await addDoc(collection(db, "users"), {
-        name: newProfessor,
-        role: 'professor',
-      });
-      alert('Professor adicionado com sucesso!');
-      setNewProfessor('');
+      const userRef = doc(db, 'users', selectedUser.id);
+      await updateDoc(userRef, { role: newRole });
+      alert(`Cargo atualizado para ${newRole} com sucesso!`);
+      setNewRole('');
+      setSelectedUser(null);
     } catch (error) {
-      console.error("Erro ao adicionar professor:", error);
+      alert(`Erro ao atualizar o cargo: ${error.message}`);
     }
   };
 
   const handleEditRanking = (index) => {
     setEditingIndex(index);
     setNewNota(rankingData[index].nota);
+    setNewCurso(rankingData[index].curso);
   };
 
   const handleSaveRanking = async (id, index) => {
+    if (isNaN(newNota) || newNota < 0 || newNota > 10) {
+      setModalMessage("A nota deve ser um número entre 0 e 10.");
+      setShowModal(true);
+      return;
+    }
+
     try {
       const docRef = doc(db, 'ranking', id);
-      await updateDoc(docRef, { nota: newNota });
+      await updateDoc(docRef, { nota: Number(newNota), curso: newCurso });
       const updatedRanking = [...rankingData];
-      updatedRanking[index].nota = newNota;
+      updatedRanking[index].nota = Number(newNota);
+      updatedRanking[index].curso = newCurso;
       setRankingData(updatedRanking);
       setEditingIndex(null);
-      setNewNota('');
+      setModalMessage("Curso e nota atualizados com sucesso!");
+      setShowModal(true);
     } catch (error) {
-      console.error('Erro ao atualizar nota:', error);
+      setModalMessage(`Erro ao atualizar: ${error.message}`);
+      setShowModal(true);
     }
   };
+
+  const handleDeleteRanking = async (id) => {
+    try {
+      await deleteDoc(doc(db, 'ranking', id));
+      setRankingData(rankingData.filter(item => item.id !== id));
+      setModalMessage("Curso removido com sucesso!");
+      setShowModal(true);
+    } catch (error) {
+      setModalMessage(`Erro ao remover curso: ${error.message}`);
+      setShowModal(true);
+    }
+  };
+
+  const closeModal = () => setShowModal(false);
+
+  const filteredUsers = users.filter(user =>
+    user.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    user.email?.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const filteredRanking = rankingData.filter(item =>
+    item.curso.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className={Styles.adminContainer}>
       <h2>Dashboard de Administração</h2>
 
-      {/* Adicionar professor */}
-      <div className={Styles.addProfessor}>
-        <input 
-          type="text" 
-          placeholder="Nome do professor"
-          value={newProfessor}
-          onChange={(e) => setNewProfessor(e.target.value)}
-          className={Styles.input}
+      <div className={Styles.searchContainer}>
+        <input
+          type="text"
+          placeholder="Pesquisar por nome ou email"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className={Styles.searchInput}
         />
-        <button onClick={handleAddProfessor} className={Styles.addButton}>
-          Adicionar Professor
-        </button>
       </div>
 
-      <h3>Professores Atuais</h3>
-      <ul>
-        {professors.map((prof, index) => (
-          <li key={index}>{prof.name}</li>
-        ))}
-      </ul>
+      <h3>Gerenciar Cargos de Usuários</h3>
+      <table className={Styles.Table}>
+        <thead className={Styles.Thead}>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Cargo Atual</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody className={Styles.Tbody}>
+          {filteredUsers.map(user => (
+            <tr key={user.id} className={Styles.Tr}>
+              <td className={Styles.Td}>{user.name || 'N/A'}</td>
+              <td className={Styles.Td}>{user.email}</td>
+              <td className={Styles.Td}>{user.role || 'Nenhum'}</td>
+              <td className={Styles.Td}>
+                <button
+                  onClick={() => setSelectedUser(user)}
+                  className={Styles.addButton}
+                >
+                  Selecionar
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
-      {/* Gerenciar Ranking */}
+      {selectedUser && (
+        <div className={Styles.modal}>
+          <div className={Styles.modalContent}>
+            <h3>Atribuir Cargo</h3>
+            <p>
+              <strong>Usuário Selecionado:</strong> {selectedUser.name || 'N/A'} ({selectedUser.email})
+            </p>
+            <select
+              value={newRole}
+              onChange={(e) => setNewRole(e.target.value)}
+              className={Styles.input}
+            >
+              <option value="">Selecione um cargo</option>
+              <option value="admin">Admin</option>
+              <option value="professor">Professor</option>
+            </select>
+            <button
+              onClick={handleAssignRole}
+              className={Styles.addButton}
+            >
+              Atribuir Cargo
+            </button>
+            <button
+              onClick={() => setSelectedUser(null)}
+              className={Styles.modalButton}
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
+
       <h3>Gerenciar Ranking</h3>
+      <input
+        type="text"
+        placeholder="Buscar curso"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className={Styles.searchInput}
+      />
       <table className={Styles.Table}>
         <thead className={Styles.Thead}>
           <tr>
@@ -103,15 +202,25 @@ export function Administracao() {
           </tr>
         </thead>
         <tbody className={Styles.Tbody}>
-          {rankingData.map((item, index) => (
+          {filteredRanking.map((item, index) => (
             <tr key={item.id} className={Styles.Tr}>
-              <td className={Styles.Td}>{item.curso}</td>
               <td className={Styles.Td}>
                 {editingIndex === index ? (
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
+                    value={newCurso}
+                    onChange={(e) => setNewCurso(e.target.value)}
+                  />
+                ) : (
+                  item.curso
+                )}
+              </td>
+              <td className={Styles.Td}>
+                {editingIndex === index ? (
+                  <input
+                    type="text"
                     value={newNota}
-                    onChange={(e) => setNewNota(e.target.value)} 
+                    onChange={(e) => setNewNota(e.target.value)}
                   />
                 ) : (
                   item.nota
@@ -127,11 +236,25 @@ export function Administracao() {
                     Editar
                   </button>
                 )}
+                <button onClick={() => handleDeleteRanking(item.id)}>
+                  Excluir
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {showModal && (
+        <div className={Styles.modal}>
+          <div className={Styles.modalContent}>
+            <p>{modalMessage}</p>
+            <button onClick={closeModal} className={Styles.modalButton}>
+              Fechar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
