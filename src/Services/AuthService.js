@@ -17,6 +17,7 @@ export const getCurrentUserRole = async () => {
           } else {
             reject("No role found for user");  // Rejeita a Promise caso o papel não exista
           }
+        
         } catch (error) {
           reject("Error fetching user role: " + error);  // Rejeita em caso de erro ao buscar o papel
         }
