@@ -7,7 +7,7 @@ Aplicação Web, construida durante o curso Técnico em Informática da EEEP Irm
 <p align="center">
   <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
 </p>
-<img src="https://epanazelia.vercel.app/static/media/Frente1.e6128a7dbe2ca7dfb084.jpeg" alt="Exemplo imagem">
+<img src="src/components/Imgs/image.png" alt="Exemplo imagem">
 
 ## 🚀 Tecnologias
 
