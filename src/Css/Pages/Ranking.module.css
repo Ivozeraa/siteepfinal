@@ -3,9 +3,9 @@
 }
 
 .Table {
-    width: 70%;
+    width: 75%;
     border-collapse: collapse;
-    margin: 50px auto ;
+    margin: 50px auto;
 }
 
 .Thead {
@@ -15,7 +15,7 @@
 
 .Td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
     border: 1px solid #ddd;
 }
 

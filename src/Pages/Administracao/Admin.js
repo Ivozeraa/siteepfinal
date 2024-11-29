@@ -65,8 +65,8 @@ export function Administracao() {
   };
 
   const handleSaveRanking = async (id, index) => {
-    if (isNaN(newNota) || newNota < 0 || newNota > 10) {
-      setModalMessage("A nota deve ser um número entre 0 e 10.");
+    if (isNaN(newNota) || newNota < 0 || newNota > 100) {
+      setModalMessage("A nota deve ser um número entre 0 e 100.");
       setShowModal(true);
       return;
     }
@@ -112,7 +112,7 @@ export function Administracao() {
 
   return (
     <div className={Styles.adminContainer}>
-      <h2>Dashboard de Administração</h2>
+      <h2 className={Styles.tituloDashboard}>Dashboard de Administração</h2>
 
       <div className={Styles.searchContainer}>
         <input
@@ -124,7 +124,7 @@ export function Administracao() {
         />
       </div>
 
-      <h3>Gerenciar Cargos de Usuários</h3>
+      <h3 className={Styles.tituloAdmin}>Gerenciar Cargos de Usuários</h3>
       <table className={Styles.Table}>
         <thead className={Styles.Thead}>
           <tr>
@@ -185,7 +185,7 @@ export function Administracao() {
         </div>
       )}
 
-      <h3>Gerenciar Ranking</h3>
+      <h3 className={Styles.tituloAdmin}>Gerenciar Ranking</h3>
       <input
         type="text"
         placeholder="Buscar curso"

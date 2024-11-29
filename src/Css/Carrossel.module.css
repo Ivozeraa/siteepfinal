@@ -7,7 +7,7 @@
 
 .carrosselContainer img {
   width: 100%; 
-  height: 33rem; 
+  height: 40rem; 
   object-fit: cover;
   overflow: hidden;
   filter: brightness(40%);
@@ -61,7 +61,11 @@
 
 @media (max-width: 768px) {
   .carrosselContainer img{
-    height: 40rem;
+    height: 20rem;
+  }
+  
+  .desc{
+    top: 62%;
   }
 
   .titulo {
