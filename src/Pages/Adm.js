@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
-import WJ from "../components/Imgs/Frente1.jpeg";
 import AdmFoto from "../components/Imgs/admFoto.webp";
+import SA from "../components/Imgs/Suiani.jpg"
 import MA from "../components/Imgs/marcos.jpg"
 
 export function Adm() {
@@ -48,14 +48,15 @@ export function Adm() {
                         <li className={Styles.ItemDisciplinas}>Gestão de Projetos</li>
                         <li className={Styles.ItemDisciplinas}>Gestão Organizacional</li>
                         <li className={Styles.ItemDisciplinas}>Técnicas e Atividades Financeiras</li>
-
-
                     </ul>
 
                     <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(0, 0, 200)'}}>Terceiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
-                        <li className={Styles.ItemDisciplinas}>Laboratório de Software, Web e Hardware</li>
-                        <li className={Styles.ItemDisciplinas}>Profissão e Formação</li>
+                        <li className={Styles.ItemDisciplinas}>Estratégia de Produção</li>
+                        <li className={Styles.ItemDisciplinas}>Logística Empresarial</li>
+                        <li className={Styles.ItemDisciplinas}>Responsabilidade Socioambiental</li>
+                        <li className={Styles.ItemDisciplinas}>Gestão de Vendas</li>
+
                     </ul>
                 </div>
                 <div className={Styles.IlustracaoCurso} data-aos="fade-up">
@@ -74,7 +75,7 @@ export function Adm() {
                             </div>                    
                         </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
-                        <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
+                        <img className={Styles.ImgProfs} src={SA} alt="Professor" />
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Suiani Amaro</h3>
                             <p className={Styles.SubtitleCardProf}>Orientadora de Estágio</p>

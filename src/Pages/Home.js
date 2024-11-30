@@ -29,6 +29,17 @@ export function Home() {
         <div className={Styles.Home}>
             <div data-aos="fade-up" className="imagemPrincipal"></div>
             <Carrossel imagem3={Imagem3} imagem2={Imagem2} imagem1={Imagem1} />
+
+            <div className={Styles.Edital} data-aos="fade-up">
+                <div className={Styles.TitulosEdital}>
+                    <h2>Acesse o Edital</h2>
+                    <p>Confira todas as informações detalhadas sobre como ingressar na nossa instituição. Não perca a oportunidade de fazer parte da EEEP Irmã Ana Zélia da Fonseca!</p>
+                </div>
+                <a href="https://www.crede20.seduc.ce.gov.br/wp-content/uploads/sites/107/2024/11/Ana-Zelia.pdf" target="_blank" rel="noopener noreferrer" className={Styles.BotaoEdital}>
+                   Ver Edital
+                </a>
+            </div>
+
             <Titulo titulo="Objetivo" />
                 <div data-aos="fade-up" className={Styles.container}>
                     <p>A Escola Estadual de Educação Profissional Irmã Ana Zélia da Fonseca tem como objetivo oferecer uma formação técnica e profissional de alta qualidade, preparando seus alunos para as exigências do mercado de trabalho contemporâneo. Com um currículo diversificado, alinhado às necessidades do setor, a escola busca desenvolver não apenas habilidades práticas e teóricas, mas também fortalecer competências essenciais para a vida profissional, como a ética, a cidadania e a responsabilidade social. Além disso, a instituição se compromete a promover a inclusão social e o empoderamento de seus estudantes, visando a construção de uma sociedade mais justa, equitativa e solidária. Ao investir no potencial dos alunos, a escola contribui para que eles se tornem cidadãos conscientes e preparados para os desafios da atualidade.</p>

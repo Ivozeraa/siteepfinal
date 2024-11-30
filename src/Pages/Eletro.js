@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
-import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
-import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
+import ImgLabEletro from '../components/Imgs/LabEletro.jpg';
 import WJ from "../components/Imgs/Frente1.jpeg";
 import TT from "../components/Imgs/tobias.jpg"
 import PeopleIcon from '../components/Imgs/IconEletro.png'
@@ -22,7 +21,7 @@ export function Eletro() {
             <h1 className={Styles.NomeCurso} data-aos="fade-up">
                 Curso Técnico em <span style={{color: 'rgb(255, 220, 0)'}}>Eletrotécnica</span>
             </h1>
-            <img src={PeopleIcon}/>
+            <img className={Styles.ImgIconCurso} src={PeopleIcon}/>
             <p className={Styles.SobreCurso} data-aos="fade-up">
                 O curso técnico em Eletrotécnica da EEEP Irmã Ana Zélia da Fonseca forma profissionais capacitados para atuar em instalações elétricas, automação industrial e manutenção de sistemas elétricos. Com ênfase em circuitos elétricos, eletrônica, sistemas de potência e programação, o curso oferece aulas práticas em laboratórios, permitindo que os alunos apliquem a teoria em projetos reais. A formação prepara os estudantes para o mercado de trabalho ou para prosseguirem em cursos superiores em áreas como Engenharia Elétrica.
             
@@ -58,10 +57,9 @@ export function Eletro() {
                 </div>
 
                 <div className={Styles.LabsCurso} data-aos="fade-up">
-                    <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
+                    <h1 className={Styles.LabCursoTitulo}>Laboratório</h1>
                     <div className={Styles.ImgsLabs}>
-                        <img src={ImgLabLing} alt="Laboratório de Línguas" data-aos="fade-up" />
-                        <img src={ImgLabHard} alt="Laboratório de Hardware" data-aos="fade-up" />
+                        <img src={ImgLabEletro} alt="Laboratório de Eletro" data-aos="fade-up" />
                     </div>
                 </div>
             </section>
@@ -78,7 +76,7 @@ export function Eletro() {
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
                         <div className={Styles.InforProf}>
-                            <h3 className={Styles.TitleCardProf}></h3>
+                            <h3 className={Styles.TitleCardProf}>Sanyr Albuquerque</h3>
                             <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>
                         </div>    
                     </div>

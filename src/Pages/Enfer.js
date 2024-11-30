@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Styles from '../Css/Pages/Cursos.module.css';
-import ImgLabLing from '../components/Imgs/LabLinguas.jpeg';
-import ImgLabHard from '../components/Imgs/LabHardware.jpeg';
+import ImgLabEnfer from '../components/Imgs/LabEnfer.jpg';
 import WJ from "../components/Imgs/Frente1.jpeg";
+import BA from "../components/Imgs/Bouzano.jpg"
+import NF from "../components/Imgs/Nayrlla.jpg"
 
 export function Enfer() {
     useEffect(() => {
@@ -53,10 +54,9 @@ export function Enfer() {
                 </div>
 
                 <div className={Styles.LabsCurso} data-aos="fade-up">
-                    <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
+                    <h1 className={Styles.LabCursoTitulo}>Laboratório</h1>
                     <div className={Styles.ImgsLabs}>
-                        <img src={ImgLabLing} alt="Laboratório de Línguas" />
-                        <img src={ImgLabHard} alt="Laboratório de Hardware" />
+                        <img src={ImgLabEnfer} alt="Laboratório de Enfermagem" />
                     </div>
                 </div>
             </section>
@@ -65,16 +65,26 @@ export function Enfer() {
                 <h1 className={Styles.ProfCursoTitulo}>Professores do Curso</h1>
                 <div className={Styles.ProfCursoDiv}>
                     <div className={Styles.CardProf} data-aos="fade-up">
-                        <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
+                        <img className={Styles.ImgProfs} src={NF} alt="Professor" />
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Nayrlla Feitosa</h3>
                             <p className={Styles.SubtitleCardProf}>Coordenadora do Curso</p>
-                        </div>                    </div>
+                        </div>                    
+                    </div>
+
                     <div className={Styles.CardProf} data-aos="fade-up">
                         <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Suzianny Rodrigues</h3>
                             <p className={Styles.SubtitleCardProf}>Orientadora de Estágio</p>
+                        </div>                    
+                    </div>
+
+                    <div className={Styles.CardProf} data-aos="fade-up">
+                        <img className={Styles.ImgProfs} src={BA} alt="Professor" />
+                        <div className={Styles.InforProf}>
+                            <h3 className={Styles.TitleCardProf}>Bouzano Alves</h3>
+                            <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>
                         </div>                    
                     </div>
                 </div>

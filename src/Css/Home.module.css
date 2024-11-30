@@ -12,6 +12,56 @@
     font-size: 1.5rem;text-align: justify;
 }
 
+.Edital {
+    border-radius: ;
+    text-align: center;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tom-verde);
+    padding: 20px 50px;
+
+}
+
+.TitulosEdital{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+}
+
+.Edital h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.Edital p {
+    font-size: 1rem;
+    color: #cbcbcb;
+    margin-bottom: 20px;
+    max-width: 80%;
+}
+
+.BotaoEdital {
+    text-decoration: none;
+    color: var(--tom-laranja);
+    padding: 7px;
+    border: solid 2px var(--tom-laranja);
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    width: 25%;
+}
+
+.BotaoEdital:hover {
+    background-color: var(--tom-laranja);
+    color: #ffffff;
+    transition: 100ms ease-in-out;
+}
+
+
 .gestao{
     display: flex;
     align-items: center;
@@ -21,6 +71,7 @@
     max-width: 100%;
     gap: 1rem;
     flex-wrap: wrap;
+    margin: 100px 0;
 }
 
 .card{
@@ -70,7 +121,9 @@
     align-items: center;
     margin: auto;
     flex-wrap: wrap;
-    max-width: 50%;
+    max-width: 70%;
+    border-radius: 20px;
+
 }
 
 .Bloco{
