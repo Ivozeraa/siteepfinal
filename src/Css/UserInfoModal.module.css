@@ -18,6 +18,8 @@
     width: 90%;
     max-width: 500px;
     text-align: center;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .closeButton {
@@ -32,7 +34,7 @@
     right: 10px;
 }
 
-inputField {
+.inputField {
     margin: 10px 0;
     padding: 8px;
     width: 100%;
@@ -53,4 +55,35 @@ inputField {
 
 .submitButton:hover {
     background-color: var(--tom-laranja);
+}
+
+.previewImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .modalContent {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .previewImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .closeButton {
+        font-size: 1.2rem;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .submitButton {
+        padding: 8px 16px;
+    }
 }

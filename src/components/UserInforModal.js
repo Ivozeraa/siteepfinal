@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import styles from '../Css/UserInfoModal.module.css';
 
 export const UserInfoModal = ({ onClose, setUserPhoto }) => {
-    const [course, setCourse] = useState('');
     const [photo, setPhoto] = useState(null);
 
     const handlePhotoChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setPhoto(URL.createObjectURL(file)); // Preview da imagem local
-            setUserPhoto(URL.createObjectURL(file)); // Atualiza foto no Header
+            const photoURL = URL.createObjectURL(file); // Preview da imagem local
+            setPhoto(photoURL);
+            setUserPhoto(photoURL); // Atualiza a foto do usuário
         }
     };
 
     const handleSubmit = () => {
-        // Processar o envio da imagem e curso para o banco ou Firebase
+        // Processar o envio da imagem para o banco ou Firebase
+        localStorage.setItem("userPhoto", photo); // Persistir a foto no localStorage
         onClose(); // Fecha o modal
     };
 
@@ -22,15 +23,7 @@ export const UserInfoModal = ({ onClose, setUserPhoto }) => {
         <div className={styles.modalOverlay}>
             <div className={styles.modalContent}>
                 <button className={styles.closeButton} onClick={onClose}>×</button>
-                <h2>Atualizar Informações</h2>
-
-                <input
-                    className={styles.inputField}
-                    type="text"
-                    placeholder="Curso"
-                    value={course}
-                    onChange={(e) => setCourse(e.target.value)}
-                />
+                <h2>Atualizar Foto</h2>
 
                 <input
                     className={styles.inputField}

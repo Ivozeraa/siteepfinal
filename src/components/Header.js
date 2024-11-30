@@ -2,14 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faGraduationCap, faUser, faBolt, faCode, faSyringe, faEnvelope, faCrown } from '@fortawesome/free-solid-svg-icons';
 import { auth } from '../Services/firebase'; 
-import { UserInfoModal } from './UserInforModal'; 
+import { UserInfoModal } from './UserInforModal'; // Importe o modal
 import styles from "../Css/Header.css"; 
 
 export function Header() {
     const [showList, setShowList] = useState(false);
     const [user, setUser] = useState(null);
     const [showModal, setShowModal] = useState(false); // Controle do modal
-    const [userPhoto, setUserPhoto] = useState("/default-avatar.png"); // Foto padrão
+    const [userPhoto, setUserPhoto] = useState(localStorage.getItem("userPhoto") || "/default-avatar.png"); // Foto persistente
 
     const listRef = useRef(null);
     const buttonRef = useRef(null);

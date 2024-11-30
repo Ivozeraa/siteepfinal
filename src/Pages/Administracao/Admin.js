@@ -1,24 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { db } from '../../Services/firebase';
-import { collection, getDocs, updateDoc, doc, onSnapshot, deleteDoc } from 'firebase/firestore';
-import Styles from '../../Css/Pages/Admin.module.css';
+import React, { useState, useEffect } from "react";
+import { db } from "../../Services/firebase";
+import {
+  collection,
+  getDocs,
+  updateDoc,
+  doc,
+  onSnapshot,
+  deleteDoc,
+} from "firebase/firestore";
+import Styles from "../../Css/Pages/Admin.module.css";
 
 export function Administracao() {
   const [users, setUsers] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedUser, setSelectedUser] = useState(null);
-  const [newRole, setNewRole] = useState('');
+  const [newRole, setNewRole] = useState("");
   const [rankingData, setRankingData] = useState([]);
-  const [newNota, setNewNota] = useState('');
-  const [newCurso, setNewCurso] = useState('');
+  const [newPortugues, setNewPortugues] = useState("");
+  const [newMatematica, setNewMatematica] = useState("");
   const [editingIndex, setEditingIndex] = useState(null);
-  const [modalMessage, setModalMessage] = useState('');
+  const [modalMessage, setModalMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const querySnapshot = await getDocs(collection(db, 'users'));
-      const userList = querySnapshot.docs.map(doc => ({
+      const querySnapshot = await getDocs(collection(db, "users"));
+      const userList = querySnapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
       }));
@@ -26,8 +33,8 @@ export function Administracao() {
     };
 
     const fetchRanking = () => {
-      const unsubscribe = onSnapshot(collection(db, 'ranking'), (snapshot) => {
-        const ranking = snapshot.docs.map(doc => ({
+      const unsubscribe = onSnapshot(collection(db, "ranking"), (snapshot) => {
+        const ranking = snapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
@@ -41,154 +48,95 @@ export function Administracao() {
     fetchRanking();
   }, []);
 
-  const handleAssignRole = async () => {
-    if (!selectedUser || !newRole) {
-      alert('Selecione um usuário e um cargo válido.');
-      return;
-    }
+  const handleEditUser = (user) => {
+    setSelectedUser(user);
+    setNewRole(user.role);
+  };
 
+  const handleSaveUser = async () => {
     try {
-      const userRef = doc(db, 'users', selectedUser.id);
-      await updateDoc(userRef, { role: newRole });
-      alert(`Cargo atualizado para ${newRole} com sucesso!`);
-      setNewRole('');
+      const userDoc = doc(db, "users", selectedUser.id);
+      await updateDoc(userDoc, { role: newRole });
+
+      const updatedUsers = users.map((user) =>
+        user.id === selectedUser.id ? { ...user, role: newRole } : user
+      );
+
+      setUsers(updatedUsers);
       setSelectedUser(null);
-    } catch (error) {
-      alert(`Erro ao atualizar o cargo: ${error.message}`);
-    }
-  };
-
-  const handleEditRanking = (index) => {
-    setEditingIndex(index);
-    setNewNota(rankingData[index].nota);
-    setNewCurso(rankingData[index].curso);
-  };
-
-  const handleSaveRanking = async (id, index) => {
-    if (isNaN(newNota) || newNota < 0 || newNota > 100) {
-      setModalMessage("A nota deve ser um número entre 0 e 100.");
-      setShowModal(true);
-      return;
-    }
-
-    try {
-      const docRef = doc(db, 'ranking', id);
-      await updateDoc(docRef, { nota: Number(newNota), curso: newCurso });
-      const updatedRanking = [...rankingData];
-      updatedRanking[index].nota = Number(newNota);
-      updatedRanking[index].curso = newCurso;
-      setRankingData(updatedRanking);
-      setEditingIndex(null);
-      setModalMessage("Curso e nota atualizados com sucesso!");
+      setModalMessage("Função do usuário atualizada com sucesso!");
       setShowModal(true);
     } catch (error) {
-      setModalMessage(`Erro ao atualizar: ${error.message}`);
+      setModalMessage(`Erro ao salvar: ${error.message}`);
       setShowModal(true);
     }
   };
 
   const handleDeleteRanking = async (id) => {
     try {
-      await deleteDoc(doc(db, 'ranking', id));
-      setRankingData(rankingData.filter(item => item.id !== id));
-      setModalMessage("Curso removido com sucesso!");
+      await deleteDoc(doc(db, "ranking", id));
+      setRankingData(rankingData.filter((item) => item.id !== id));
+      setModalMessage("Registro de ranking removido com sucesso!");
       setShowModal(true);
     } catch (error) {
-      setModalMessage(`Erro ao remover curso: ${error.message}`);
+      setModalMessage(`Erro ao remover registro: ${error.message}`);
+      setShowModal(true);
+    }
+  };
+
+  const handleEditRanking = (index) => {
+    setEditingIndex(index);
+    const item = rankingData[index];
+    setNewPortugues(item.portugues);
+    setNewMatematica(item.matematica);
+  };
+
+  const handleSaveRanking = async () => {
+    try {
+      const item = rankingData[editingIndex];
+      const rankingDoc = doc(db, "ranking", item.id);
+      await updateDoc(rankingDoc, {
+        portugues: newPortugues,
+        matematica: newMatematica,
+      });
+
+      const updatedRankingData = [...rankingData];
+      updatedRankingData[editingIndex] = {
+        ...updatedRankingData[editingIndex],
+        portugues: newPortugues,
+        matematica: newMatematica,
+      };
+
+      setRankingData(updatedRankingData);
+      setEditingIndex(null);
+      setModalMessage("Ranking atualizado com sucesso!");
+      setShowModal(true);
+    } catch (error) {
+      setModalMessage(`Erro ao salvar ranking: ${error.message}`);
       setShowModal(true);
     }
   };
 
   const closeModal = () => setShowModal(false);
 
-  const filteredUsers = users.filter(user =>
-    user.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.email?.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredUsers = users.filter((user) =>
+    user.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const filteredRanking = rankingData.filter(item =>
+  const filteredRanking = rankingData.filter((item) =>
     item.curso.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const usersToShow = filteredUsers.slice(0, 10);
 
   return (
     <div className={Styles.adminContainer}>
       <h2 className={Styles.tituloDashboard}>Dashboard de Administração</h2>
 
-      <div className={Styles.searchContainer}>
-        <input
-          type="text"
-          placeholder="Pesquisar por nome ou email"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className={Styles.searchInput}
-        />
-      </div>
-
-      <h3 className={Styles.tituloAdmin}>Gerenciar Cargos de Usuários</h3>
-      <table className={Styles.Table}>
-        <thead className={Styles.Thead}>
-          <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Cargo Atual</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody className={Styles.Tbody}>
-          {filteredUsers.map(user => (
-            <tr key={user.id} className={Styles.Tr}>
-              <td className={Styles.Td}>{user.name || 'N/A'}</td>
-              <td className={Styles.Td}>{user.email}</td>
-              <td className={Styles.Td}>{user.role || 'Nenhum'}</td>
-              <td className={Styles.Td}>
-                <button
-                  onClick={() => setSelectedUser(user)}
-                  className={Styles.addButton}
-                >
-                  Selecionar
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {selectedUser && (
-        <div className={Styles.modal}>
-          <div className={Styles.modalContent}>
-            <h3>Atribuir Cargo</h3>
-            <p>
-              <strong>Usuário Selecionado:</strong> {selectedUser.name || 'N/A'} ({selectedUser.email})
-            </p>
-            <select
-              value={newRole}
-              onChange={(e) => setNewRole(e.target.value)}
-              className={Styles.input}
-            >
-              <option value="">Selecione um cargo</option>
-              <option value="admin">Admin</option>
-              <option value="professor">Professor</option>
-            </select>
-            <button
-              onClick={handleAssignRole}
-              className={Styles.addButton}
-            >
-              Atribuir Cargo
-            </button>
-            <button
-              onClick={() => setSelectedUser(null)}
-              className={Styles.modalButton}
-            >
-              Cancelar
-            </button>
-          </div>
-        </div>
-      )}
-
-      <h3 className={Styles.tituloAdmin}>Gerenciar Ranking</h3>
+      <h3 className={Styles.tituloAdmin}>Gerenciar Usuários</h3>
       <input
         type="text"
-        placeholder="Buscar curso"
+        placeholder="Buscar usuário"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className={Styles.searchInput}
@@ -196,49 +144,86 @@ export function Administracao() {
       <table className={Styles.Table}>
         <thead className={Styles.Thead}>
           <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Função</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody className={Styles.Tbody}>
+          {usersToShow.map((user) => (
+            <tr key={user.id} className={Styles.Tr}>
+              <td className={Styles.Td}>{user.name}</td>
+              <td className={Styles.Td}>{user.email}</td>
+              <td className={Styles.Td}>
+                {selectedUser?.id === user.id ? (
+                  <select
+                    value={newRole}
+                    onChange={(e) => setNewRole(e.target.value)}
+                  >
+                    <option value="admin">Admin</option>
+                    <option value="professor">Professor</option>
+                    <option value="aluno">Aluno</option>
+                  </select>
+                ) : (
+                  user.role
+                )}
+              </td>
+              <td className={Styles.Td}>
+                {selectedUser?.id === user.id ? (
+                  <button onClick={handleSaveUser}>Salvar</button>
+                ) : (
+                  <button onClick={() => handleEditUser(user)}>Editar</button>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h3 className={Styles.tituloAdmin}>Gerenciar Ranking</h3>
+      <table className={Styles.Table}>
+        <thead className={Styles.Thead}>
+          <tr>
             <th>Curso</th>
-            <th>Nota</th>
+            <th>Português</th>
+            <th>Matemática</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody className={Styles.Tbody}>
           {filteredRanking.map((item, index) => (
             <tr key={item.id} className={Styles.Tr}>
+              <td className={Styles.Td}>{item.curso}</td>
               <td className={Styles.Td}>
                 {editingIndex === index ? (
                   <input
-                    type="text"
-                    value={newCurso}
-                    onChange={(e) => setNewCurso(e.target.value)}
+                    type="number"
+                    value={newPortugues}
+                    onChange={(e) => setNewPortugues(e.target.value)}
                   />
                 ) : (
-                  item.curso
+                  item.portugues
                 )}
               </td>
               <td className={Styles.Td}>
                 {editingIndex === index ? (
                   <input
-                    type="text"
-                    value={newNota}
-                    onChange={(e) => setNewNota(e.target.value)}
+                    type="number"
+                    value={newMatematica}
+                    onChange={(e) => setNewMatematica(e.target.value)}
                   />
                 ) : (
-                  item.nota
+                  item.matematica
                 )}
               </td>
               <td className={Styles.Td}>
                 {editingIndex === index ? (
-                  <button onClick={() => handleSaveRanking(item.id, index)}>
-                    Salvar
-                  </button>
+                  <button onClick={handleSaveRanking}>Salvar</button>
                 ) : (
-                  <button onClick={() => handleEditRanking(index)}>
-                    Editar
-                  </button>
+                  <button onClick={() => handleEditRanking(index)}>Editar</button>
                 )}
-                <button onClick={() => handleDeleteRanking(item.id)}>
-                  Excluir
-                </button>
+                <button onClick={() => handleDeleteRanking(item.id)}>Excluir</button>
               </td>
             </tr>
           ))}

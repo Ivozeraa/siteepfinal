@@ -31,7 +31,7 @@ export function Ranking() {
         <thead className={Styles.Thead}>
           <tr>
             <th>Curso</th>
-            <th>Portugues</th>
+            <th>Português</th>
             <th>Matemática</th>
           </tr>
         </thead>
@@ -39,8 +39,8 @@ export function Ranking() {
           {rankingData.map((item) => (
             <tr key={item.id} className={Styles.Tr}>
               <td className={Styles.Td}>{item.curso}</td>
-              <td className={Styles.Td}>{item.nota}</td>
               <td className={Styles.Td}>{item.portugues}</td>
+              <td className={Styles.Td}>{item.matematica}</td>
             </tr>
           ))}
         </tbody>
