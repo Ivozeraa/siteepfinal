@@ -170,59 +170,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Novo estilo para o menu de usuário */
-.user-menu {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: var(--tom-verde);
-    border-radius: 10px;
-    border: 2px solid var(--tom-laranja);
-    z-index: 1000;
-    width: 150px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
-}
-
-.user-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.user-menu li {
-    padding: 10px;
-    color: white;
-}
-
-.user-menu li a,
-.user-menu li button {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: none;
-    font-weight: 700;
-}
-
-.user-menu li a:hover,
-.user-menu li button:hover {
-    background-color: var(--tom-laranja);
-}
-
-.user-profile.active + .user-menu {
-    opacity: 1;
-    max-height: 200px;
-    transform: translateY(0);
-}
-
-/* Media Query para telas menores */
 @media (max-width: 768px) {
     header h1 {
         display: none;
@@ -231,19 +178,5 @@ nav ul li a:hover {
     header img {
         width: 40px;
         height: 40px;
-    }
-
-    header nav {
-        flex-direction: column;
-    }
-
-    .option {
-        margin-right: 0;
-        padding: 10px;
-        width: 100%;
-    }
-
-    .user-profile {
-        margin-top: 10px;
     }
 }
