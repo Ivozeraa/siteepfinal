@@ -1,22 +1,35 @@
 import React, { useState } from 'react';
 import styles from '../Css/UserInfoModal.module.css';
+import { storage, ref, uploadBytes, getDownloadURL } from '../Services/firebase';
 
-export const UserInfoModal = ({ onClose, setUserPhoto }) => {
+export const UserInfoModal = ({ onClose, setUserPhoto, user }) => {
     const [photo, setPhoto] = useState(null);
 
     const handlePhotoChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            const photoURL = URL.createObjectURL(file); // Preview da imagem local
+            const photoURL = URL.createObjectURL(file);
             setPhoto(photoURL);
-            setUserPhoto(photoURL); // Atualiza a foto do usuário
+            setUserPhoto(photoURL);
         }
     };
 
-    const handleSubmit = () => {
-        // Processar o envio da imagem para o banco ou Firebase
-        localStorage.setItem("userPhoto", photo); // Persistir a foto no localStorage
-        onClose(); // Fecha o modal
+    const handleSubmit = async () => {
+        if (photo) {
+            const storageRef = ref(storage, `user-photos/${user.uid}.jpg`);
+            const response = await fetch(photo);
+            const blob = await response.blob();
+
+            uploadBytes(storageRef, blob).then((snapshot) => {
+                getDownloadURL(snapshot.ref).then((downloadURL) => {
+                    localStorage.setItem("userPhoto", downloadURL);
+                    setUserPhoto(downloadURL);
+                });
+            }).catch((error) => {
+                console.error("Erro ao carregar a foto: ", error);
+            });
+        }
+        onClose();
     };
 
     return (
