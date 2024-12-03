@@ -95,11 +95,11 @@
 
 .ProfessoresCurso {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 500px;
     margin: 50px auto;
+
 }
 
 .ProfCursoTitulo {
@@ -108,9 +108,12 @@
 
 .ProfCursoDiv {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
     align-items: center;
     justify-content: space-evenly;
     margin: 50px 0;
+    gap: 15px;
 }
 
 .ImgProfs {
