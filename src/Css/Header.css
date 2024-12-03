@@ -170,6 +170,53 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.user-profile ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: var(--tom-verde);
+    border: 2px double var(--tom-laranja);
+    border-radius: 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, max-height 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.user-profile ul li {
+    padding: 10px 15px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-profile ul li:last-child {
+    border-bottom: none;
+}
+
+.user-profile ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.user-profile ul li a:hover {
+    color: var(--tom-laranja);
+}
+
+.user-profile .showList {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+}
+
+.bttnLogout{
+    background: none;
+}
+
 @media (max-width: 768px) {
     header h1 {
         display: none;

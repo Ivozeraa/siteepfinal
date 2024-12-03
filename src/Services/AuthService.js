@@ -1,4 +1,3 @@
-// src/Services/AuthService.js
 import { auth, db } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc } from 'firebase/firestore';
@@ -13,19 +12,19 @@ export const getCurrentUserRole = async () => {
 
           if (docSnap.exists()) {
             const userRole = docSnap.data().role;
-            resolve(userRole);  // Resolve a Promise com o papel do usuário
+            resolve(userRole);  
           } else {
-            reject("No role found for user");  // Rejeita a Promise caso o papel não exista
+            reject("No role found for user");  
           }
         
         } catch (error) {
-          reject("Error fetching user role: " + error);  // Rejeita em caso de erro ao buscar o papel
+          reject("Error fetching user role: " + error); 
         }
       } else {
-        reject("No user logged in");  // Rejeita caso não haja usuário autenticado
+        reject("No user logged in");  
       }
 
-      unsubscribe();  // Garantir que o "unsubscribe" seja chamado após a verificação
+      unsubscribe(); 
     });
   });
 };

@@ -11,28 +11,28 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   useEffect(() => {
     const fetchUserRole = async () => {
       try {
-        const role = await getCurrentUserRole();  // Espera o papel ser retornado
+        const role = await getCurrentUserRole();  
         setUserRole(role);
       } catch (error) {
-        console.error(error);  // Caso algo dê errado, exibe o erro no console
-        setUserRole(null);  // Defina o papel como null se houver erro
+        console.error(error); 
+        setUserRole(null);  
       } finally {
-        setLoading(false);  // Finaliza o carregamento
+        setLoading(false);  
       }
     };
 
-    fetchUserRole();  // Chama a função para verificar o papel do usuário
-  }, []);  // O useEffect agora só roda uma vez após o componente ser montado
+    fetchUserRole();  
+  }, []);  
 
   if (loading) {
     return <p>Carregando...</p>;
   }
 
   if (!userRole || !allowedRoles.includes(userRole)) {
-    return <Navigate to="/" />;  // Redireciona se o papel não for válido
+    return <Navigate to="/" />;  
   }
 
-  return children;  // Caso o papel do usuário seja válido, renderiza os filhos
+  return children;  
 };
 
 export default ProtectedRoute;
