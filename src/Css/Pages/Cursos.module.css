@@ -112,7 +112,7 @@
 .ProfCursoDiv {
     display: flex;
     flex-wrap: wrap;
-    max-width: 90%;
+    max-width: 100%;
     align-items: center;
     justify-content: space-evenly;
     margin: 50px 0;

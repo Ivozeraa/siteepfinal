@@ -76,7 +76,7 @@
     background-color: #f4f4f9;
     border-radius: 8px;
     padding: 20px;
-    width: 30%;
+    width: 50%;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -119,13 +119,9 @@
     color: #ffffff;
 }
 
-
-
-
 .ImagemObjetivo{
     width: 50%;
 }
-
 
 .gestao{
     display: flex;
@@ -234,7 +230,7 @@
     }
 
     .Edital{
-        padding: 20px 10px;
+        padding: 20px 15px;
 
     }
 
@@ -267,7 +263,7 @@
     }
 
     .CardInfor {
-        min-width: 250px; 
+        min-width: 100%; 
         flex-shrink: 0;   
     }
 
