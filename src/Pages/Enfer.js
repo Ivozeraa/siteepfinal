@@ -6,6 +6,7 @@ import ImgLabEnfer from '../components/Imgs/LabEnfer.jpg';
 import WJ from "../components/Imgs/Frente1.jpeg";
 import BA from "../components/Imgs/Bouzano.jpg"
 import NF from "../components/Imgs/Nayrlla.jpg"
+import SR from "../components/Imgs/Suzianny.jpg"
 
 export function Enfer() {
     useEffect(() => {
@@ -73,7 +74,7 @@ export function Enfer() {
                     </div>
 
                     <div className={Styles.CardProf} data-aos="fade-up">
-                        <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
+                        <img className={Styles.ImgProfs} src={SR} alt="Professor" />
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Suzianny Rodrigues</h3>
                             <p className={Styles.SubtitleCardProf}>Orientadora de Estágio</p>

@@ -1,7 +1,7 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 80%;
     margin: auto;
 }
@@ -64,6 +64,68 @@
     transition: 100ms ease-in-out;
 }
 
+.InforHome {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.CardInfor {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+}
+
+.IconInf{
+    font-size: 40px;
+    color: var(--tom-verde);
+    margin-bottom: 15px;
+}
+
+.CardInfor h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.CardInfor p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10%;
+    
+}
+
+.CardInfor button {
+    background-color: #ffffff;
+    color: var(--tom-verde);
+    border: solid 2px var(--tom-verde);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.CardInfor button:hover {
+    background-color: var(--tom-verde);
+    color: #ffffff;
+}
+
+
+
+
+.ImagemObjetivo{
+    width: 50%;
+}
+
 
 .gestao{
     display: flex;
@@ -74,7 +136,6 @@
     max-width: 100%;
     gap: 1rem;
     flex-wrap: wrap;
-    margin: 100px 0;
 }
 
 .card{
@@ -173,18 +234,41 @@
     }
 
     .Edital{
-        padding: 20px 25px;
+        padding: 20px 10px;
 
     }
 
     .Edital h2{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .Edital p{
         font-size: 0.7rem;
-        max-width: 100%;
+        max-width: 95%;
+    }
 
+    .InforHome {
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+    }
+
+    .InforHome::-webkit-scrollbar {
+        height: 8px; 
+    }
+    
+    .InforHome::-webkit-scrollbar-thumb {
+        background-color: var(--tom-laranja); 
+        border-radius: 10px; 
+    }
+    
+    .InforHome::-webkit-scrollbar-track {
+        background-color: var(--tom-verde); 
+        border-radius: 10px;
+    }
+
+    .CardInfor {
+        min-width: 250px; 
+        flex-shrink: 0;   
     }
 
     .ImagemObjetivo{
@@ -210,7 +294,7 @@
     }
 
     .TituloMotivo{
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     
 }
