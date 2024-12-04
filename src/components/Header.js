@@ -210,9 +210,9 @@ export function Header() {
                 <li>
                   <a
                   onClick={handleLogout}><p>
-                  <FontAwesomeIcon icon={faSignOut} />
+                  <FontAwesomeIcon icon={faSignOut} className="logoutBttn"/>
                 </p>
-                <p>Logout</p>
+                <p className="logoutBttn">Logout</p>
                 </a>
                 </li>
                 {role === "admin" || role === "Professor" ? (
