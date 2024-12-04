@@ -42,7 +42,7 @@ export function Home() {
 
             <Titulo titulo="Objetivo" />
                 <div data-aos="fade-up" className={Styles.container}>
-                    <p>A Escola Estadual de Educação Profissional Irmã Ana Zélia da Fonseca tem como objetivo oferecer uma formação técnica e profissional de alta qualidade, preparando seus alunos para as exigências do mercado de trabalho contemporâneo. Com um currículo diversificado, alinhado às necessidades do setor, a escola busca desenvolver não apenas habilidades práticas e teóricas, mas também fortalecer competências essenciais para a vida profissional, como a ética, a cidadania e a responsabilidade social. Além disso, a instituição se compromete a promover a inclusão social e o empoderamento de seus estudantes, visando a construção de uma sociedade mais justa, equitativa e solidária. Ao investir no potencial dos alunos, a escola contribui para que eles se tornem cidadãos conscientes e preparados para os desafios da atualidade.</p>
+                    <p>A EEEP Irmã Ana Zélia da Fonseca oferece formação técnica e profissional de alta qualidade, preparando alunos para o mercado de trabalho com um currículo diversificado. A escola desenvolve habilidades práticas, teóricas e competências como ética, cidadania e responsabilidade social, promovendo inclusão e empoderamento. Seu objetivo é formar cidadãos conscientes e preparados para os desafios atuais, contribuindo para uma sociedade mais justa e solidária.</p>
 
                     <img className={Styles.ImagemObjetivo} src={IMGOBJ} />
                 </div>

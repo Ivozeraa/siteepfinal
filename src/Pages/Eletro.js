@@ -5,7 +5,7 @@ import Styles from '../Css/Pages/Cursos.module.css';
 import ImgLabEletro from '../components/Imgs/LabEletro.jpg';
 import WJ from "../components/Imgs/Frente1.jpeg";
 import TT from "../components/Imgs/tobias.jpg"
-import PeopleIcon from '../components/Imgs/IconEletro.png'
+import SA from "../components/Imgs/O U OMI AI O.jpg"
 
 export function Eletro() {
     useEffect(() => {
@@ -21,7 +21,6 @@ export function Eletro() {
             <h1 className={Styles.NomeCurso} data-aos="fade-up">
                 Curso Técnico em <span style={{color: 'rgb(255, 220, 0)'}}>Eletrotécnica</span>
             </h1>
-            <img className={Styles.ImgIconCurso} src={PeopleIcon}/>
             <p className={Styles.SobreCurso} data-aos="fade-up">
                 O curso técnico em Eletrotécnica da EEEP Irmã Ana Zélia da Fonseca forma profissionais capacitados para atuar em instalações elétricas, automação industrial e manutenção de sistemas elétricos. Com ênfase em circuitos elétricos, eletrônica, sistemas de potência e programação, o curso oferece aulas práticas em laboratórios, permitindo que os alunos apliquem a teoria em projetos reais. A formação prepara os estudantes para o mercado de trabalho ou para prosseguirem em cursos superiores em áreas como Engenharia Elétrica.
             
@@ -74,7 +73,7 @@ export function Eletro() {
                             <p className={Styles.SubtitleCardProf}>Coordenador do Curso</p>
                         </div>                        </div>
                     <div className={Styles.CardProf} data-aos="fade-up">
-                        <img className={Styles.ImgProfs} src={WJ} alt="Professor" />
+                        <img className={Styles.ImgProfs} src={SA} alt="Professor" />
                         <div className={Styles.InforProf}>
                             <h3 className={Styles.TitleCardProf}>Sanyr Albuquerque</h3>
                             <p className={Styles.SubtitleCardProf}>Orientador de Estágio</p>

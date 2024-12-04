@@ -223,7 +223,7 @@ export function Administracao() {
                 ) : (
                   <button onClick={() => handleEditRanking(index)}>Editar</button>
                 )}
-                <button onClick={() => handleDeleteRanking(item.id)}>Excluir</button>
+                
               </td>
             </tr>
           ))}
