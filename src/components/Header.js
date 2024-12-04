@@ -19,7 +19,6 @@ import { auth } from "../Services/firebase";
 import { getCurrentUserRole } from "../Services/AuthService";
 import { UserInfoModal } from "./UserInforModal";
 import styles from "../Css/Header.css";
-import { FaCog } from "react-icons/fa";
 
 export function Header() {
   const [showList, setShowList] = useState(false);
@@ -35,8 +34,9 @@ export function Header() {
   const listRef = useRef(null);
   const buttonRef = useRef(null);
   const navigate = useNavigate(); 
+  
 
-  const toggleList = () => {
+ const toggleList = () => {
     setShowList(!showList);
   };
 
@@ -210,9 +210,9 @@ export function Header() {
                 <li>
                   <a
                   onClick={handleLogout}><p>
-                  <FontAwesomeIcon icon={faSignOut} />
+                  <FontAwesomeIcon icon={faSignOut} className="logoutBttn"/>
                 </p>
-                <p>Logout</p>
+                <p className="logoutBttn">Logout</p>
                 </a>
                 </li>
                 {role === "admin" || role === "Professor" ? (
@@ -243,3 +243,4 @@ export function Header() {
     </div>
   );
 }
+

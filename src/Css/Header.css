@@ -217,6 +217,10 @@ nav ul li a:hover {
     background: none;
 }
 
+.logoutBttn{
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     header h1 {
         display: none;

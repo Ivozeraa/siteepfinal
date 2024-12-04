@@ -106,7 +106,8 @@
     
 }
 
-.CardInfor button {
+.CardInfor a {
+    background-color: #ffffff;
     color: var(--tom-verde);
     border: solid 2px var(--tom-verde);
     border-radius: 5px;
@@ -114,11 +115,14 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.CardInfor button:hover {
+.CardInfor a:hover {
     background-color: var(--tom-verde);
     color: #ffffff;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
 }
 
 .ImagemObjetivo{
