@@ -19,7 +19,6 @@ import { auth } from "../Services/firebase";
 import { getCurrentUserRole } from "../Services/AuthService";
 import { UserInfoModal } from "./UserInforModal";
 import styles from "../Css/Header.css";
-import { FaCog } from "react-icons/fa";
 
 export function Header() {
   const [showList, setShowList] = useState(false);
@@ -35,8 +34,9 @@ export function Header() {
   const listRef = useRef(null);
   const buttonRef = useRef(null);
   const navigate = useNavigate(); 
+  
 
-  const toggleList = () => {
+ const toggleList = () => {
     setShowList(!showList);
   };
 
@@ -243,3 +243,4 @@ export function Header() {
     </div>
   );
 }
+

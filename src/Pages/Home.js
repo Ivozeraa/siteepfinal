@@ -62,14 +62,14 @@ export function Home() {
                     <FontAwesomeIcon className={Styles.IconInf} icon={faGraduationCap} />
                     <h3>Cursos Técnicos</h3>
                     <p>Confira os cursos disponíveis em nossa escola.</p>
-                    <button>Ver Sobre</button>
+                    <a href="/">Ver Sobre</a>
                 </div>
 
                 <div className={Styles.CardInfor} data-aos="flip-left">
                     <FontAwesomeIcon className={Styles.IconInf} icon={faCrown} />
                     <h3>Ranking Escolar</h3>
                     <p>Consulte o ranking completo de todas as salas de nossa escola</p>
-                    <button>Ver Sobre</button>
+                    <a href="/ranking">Ver Sobre</a>
 
                 </div>
 
@@ -77,7 +77,7 @@ export function Home() {
                     <FontAwesomeIcon className={Styles.IconInf} icon={faSchoolFlag} />
                     <h3>Resultado Preliminar</h3>
                     <p>Consulte os resultados preliminares de 2025.</p>
-                    <button>Ver Sobre</button>
+                    <a href="/">Ver Sobre</a>
                 </div>
             </div>
 
