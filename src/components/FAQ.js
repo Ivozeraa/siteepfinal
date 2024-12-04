@@ -72,9 +72,9 @@ export function FAQ() {
                 icon={activeIndex === index ? faChevronUp : faChevronDown}
               />
             </button>
-            {activeIndex === index && (
-              <p className={Styles.faqAnswer} >{item.answer}</p>
-            )}
+            <p className={`${Styles.faqAnswer} ${activeIndex === index ? Styles.open : ''}`}>
+              {item.answer}
+            </p>
           </div>
         ))}
       </div>
