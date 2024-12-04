@@ -14,7 +14,7 @@ import AS from "../components/Imgs/aline.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy, faBook, faWrench, faCrown, faSchool, faBriefcase, faProjectDiagram, faSchoolFlag, faCogs, faTools, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FAQ } from "../components/FAQ";
-import IMGOBJ from "../components/Imgs/imagemObjetivo.png"
+import IMGOBJ from "../components/Imgs/pessoaObjetivo.png"
 
 export function Home() {
     useEffect(() => {
@@ -58,14 +58,14 @@ export function Home() {
             </div>
 
             <div className={Styles.InforHome} data-aos="fade-up">
-                <div className={Styles.CardInfor}>
+                <div className={Styles.CardInfor} data-aos="flip-left">
                     <FontAwesomeIcon className={Styles.IconInf} icon={faGraduationCap} />
                     <h3>Cursos Técnicos</h3>
                     <p>Confira os cursos disponíveis em nossa escola.</p>
                     <button>Ver Sobre</button>
                 </div>
 
-                <div className={Styles.CardInfor}>
+                <div className={Styles.CardInfor} data-aos="flip-left">
                     <FontAwesomeIcon className={Styles.IconInf} icon={faCrown} />
                     <h3>Ranking Escolar</h3>
                     <p>Consulte o ranking completo de todas as salas de nossa escola</p>
@@ -73,7 +73,7 @@ export function Home() {
 
                 </div>
 
-                <div className={Styles.CardInfor}>
+                <div className={Styles.CardInfor} data-aos="flip-left">
                     <FontAwesomeIcon className={Styles.IconInf} icon={faSchoolFlag} />
                     <h3>Resultado Preliminar</h3>
                     <p>Consulte os resultados preliminares de 2025.</p>

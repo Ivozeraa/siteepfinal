@@ -53,7 +53,13 @@ export function Eletro() {
                         <li className={Styles.ItemDisciplinas}>Sistemas de Automação Industrial</li>
                         <li className={Styles.ItemDisciplinas}>Eletroeletrônica</li>
                     </ul>
+
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(225, 220, 0)'}}>Estágio:</h2>
+                    <p className={Styles.PDisciplinas}>No terceiro ano dos cursos técnicos, os alunos devem ter o Estágio, onde colocarão em pratica o que aprenderam nos anos anteriores,e serão inseridos no mercado de trabalho. Ele pode ser organizado tanto pelos orientadores de Estágio, quanto pelos professores do curso.No final dele os Alunos deverão fazer um Trabalho de Conclusão de Curso (TCC) sobre as experiências desafios e aprendizagens.</p>
+
                 </div>
+
+                
 
                 <div className={Styles.LabsCurso} data-aos="fade-up">
                     <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
