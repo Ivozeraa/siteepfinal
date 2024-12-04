@@ -68,11 +68,9 @@
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
-    padding: 20px;
+    margin: 20px;
     flex-wrap: wrap;
-    background-color: #e4e4e4;
-    position: relative;
-    top: -5px;
+    
     border-radius: 0 0 10px 10px;
 }
 
