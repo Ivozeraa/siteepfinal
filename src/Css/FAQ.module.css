@@ -77,3 +77,9 @@
   .faqItem button:focus {
     outline: none;
   }
+
+  @media (max-width: 768px){
+    .faqTitle{
+      font-size: 1.3rem;
+    }
+  }

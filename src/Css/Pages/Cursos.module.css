@@ -40,6 +40,7 @@
 
 .SectionCurso {
     display: flex;
+    justify-content: space-between;
     margin: auto;
     max-width: 100%;
 }
@@ -66,9 +67,14 @@
     border-radius: 4px;
 }
 
+.PDisciplinas{
+    margin-left: 15px;
+}
+
 .LabsCurso {
     margin: 2rem auto;
     text-align: center;
+
 }
 
 .LabCursoTitulo {
@@ -82,6 +88,7 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -95,12 +102,11 @@
 
 .ProfessoresCurso {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 500px;
-    max-width: 100%;
     margin: 50px auto;
+
 }
 
 .ProfCursoTitulo {
@@ -110,10 +116,13 @@
 .ProfCursoDiv {
     flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
     align-items: center;
     justify-content: space-evenly;
     gap: 15px;
     margin: 50px 0;
+    gap: 15px;
 }
 
 .ImgProfs {
@@ -128,14 +137,14 @@
 }
 
 .SubtitleCardProf{
-    padding-left: 15px;
+    padding-left: 12px;
     color: rgb(220, 220, 220);
 }
 
 .CardProf {
     display: flex;
     font-size: 1rem;
-    width: 23rem;
+    width: 90%;
     background: linear-gradient(135deg, var(--tom-verde) 30%, var(--tom-verde2) 100%);
     border-radius: 5px;
     color: var(--white);
@@ -143,6 +152,7 @@
     text-align: start;
     margin: 0 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-right: solid 5px var(--tom-laranja);
 }
 
 .IlustracaoCurso{

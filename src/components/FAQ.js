@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'; 
 import Styles from '../Css/FAQ.module.css';
-import Titulo from '../components/Titulo';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

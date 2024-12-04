@@ -5,7 +5,7 @@ import Styles from '../Css/Pages/Cursos.module.css';
 import ImgLabEletro from '../components/Imgs/LabEletro.jpg';
 import WJ from "../components/Imgs/Frente1.jpeg";
 import TT from "../components/Imgs/tobias.jpg"
-import SA from "../components/Imgs/O U OMI AI O.jpg"
+import SA from "../components/Imgs/Sanyr.jpg"
 
 export function Eletro() {
     useEffect(() => {
@@ -50,17 +50,25 @@ export function Eletro() {
 
                     <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(255, 220, 0)'}}>Terceiro Ano:</h2>
                     <ul className={Styles.ListaDisciplinas}>
-                        <li className={Styles.ItemDisciplinas}>Laboratório de Software, Web e Hardware</li>
-                        <li className={Styles.ItemDisciplinas}>Profissão e Formação</li>
+                        <li className={Styles.ItemDisciplinas}>Sistemas de Automação Industrial</li>
+                        <li className={Styles.ItemDisciplinas}>Eletroeletrônica</li>
                     </ul>
+
+                    <h2 className={Styles.SubtituloDisciplinas} style={{color: 'rgb(225, 220, 0)'}}>Estágio:</h2>
+                    <p className={Styles.PDisciplinas}>No terceiro ano dos cursos técnicos, os alunos devem ter o Estágio, onde colocarão em pratica o que aprenderam nos anos anteriores,e serão inseridos no mercado de trabalho. Ele pode ser organizado tanto pelos orientadores de Estágio, quanto pelos professores do curso.No final dele os Alunos deverão fazer um Trabalho de Conclusão de Curso (TCC) sobre as experiências desafios e aprendizagens.</p>
+
                 </div>
 
+                
+
                 <div className={Styles.LabsCurso} data-aos="fade-up">
-                    <h1 className={Styles.LabCursoTitulo}>Laboratório</h1>
+                    <h1 className={Styles.LabCursoTitulo}>Laboratórios</h1>
                     <div className={Styles.ImgsLabs}>
-                        <img src={ImgLabEletro} alt="Laboratório de Eletro" data-aos="fade-up" />
+                        <img src={ImgLabEletro} alt="Laboratório de Línguas" data-aos="fade-up" />
                     </div>
                 </div>
+
+                
             </section>
 
             <div className={Styles.ProfessoresCurso} data-aos="fade-up">

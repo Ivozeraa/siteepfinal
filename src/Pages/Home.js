@@ -12,9 +12,9 @@ import RA from "../components/Imgs/rivanildo.jpeg";
 import AM from "../components/Imgs/chietinha.jpg";
 import AS from "../components/Imgs/aline.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy, faBook, faWrench, faSchool, faBriefcase, faProjectDiagram, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faTrophy, faBook, faWrench, faCrown, faSchool, faBriefcase, faProjectDiagram, faSchoolFlag, faCogs, faTools, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FAQ } from "../components/FAQ";
-import IMGOBJ from "../components/Imgs/imagemObjetivo.png"
+import IMGOBJ from "../components/Imgs/pessoaObjetivo.png"
 
 export function Home() {
     useEffect(() => {
@@ -25,6 +25,23 @@ export function Home() {
         });
     }, []);
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
     return (
         <div className={Styles.Home}>
             <div data-aos="fade-up" className="imagemPrincipal"></div>
@@ -33,16 +50,40 @@ export function Home() {
             <div className={Styles.Edital} data-aos="fade-up">
                 <div className={Styles.TitulosEdital}>
                     <h2>Acesse o Edital</h2>
-                    <p>Confira todas as informações detalhadas sobre como ingressar na nossa instituição. Não perca a oportunidade de fazer parte da EEEP Irmã Ana Zélia da Fonseca!</p>
+                    <p>Confira todas as informações detalhadas sobre como ingressar na nossa instituição.</p>
                 </div>
                 <a href="https://www.crede20.seduc.ce.gov.br/wp-content/uploads/sites/107/2024/11/Ana-Zelia.pdf" target="_blank" rel="noopener noreferrer" className={Styles.BotaoEdital}>
                    Ver Edital
                 </a>
             </div>
 
+            <div className={Styles.InforHome} data-aos="fade-up">
+                <div className={Styles.CardInfor} data-aos="flip-left">
+                    <FontAwesomeIcon className={Styles.IconInf} icon={faGraduationCap} />
+                    <h3>Cursos Técnicos</h3>
+                    <p>Confira os cursos disponíveis em nossa escola.</p>
+                    <button>Ver Sobre</button>
+                </div>
+
+                <div className={Styles.CardInfor} data-aos="flip-left">
+                    <FontAwesomeIcon className={Styles.IconInf} icon={faCrown} />
+                    <h3>Ranking Escolar</h3>
+                    <p>Consulte o ranking completo de todas as salas de nossa escola</p>
+                    <button>Ver Sobre</button>
+
+                </div>
+
+                <div className={Styles.CardInfor} data-aos="flip-left">
+                    <FontAwesomeIcon className={Styles.IconInf} icon={faSchoolFlag} />
+                    <h3>Resultado Preliminar</h3>
+                    <p>Consulte os resultados preliminares de 2025.</p>
+                    <button>Ver Sobre</button>
+                </div>
+            </div>
+
             <Titulo titulo="Objetivo" />
                 <div data-aos="fade-up" className={Styles.container}>
-                    <p>A EEEP Irmã Ana Zélia da Fonseca oferece formação técnica e profissional de alta qualidade, preparando alunos para o mercado de trabalho com um currículo diversificado. A escola desenvolve habilidades práticas, teóricas e competências como ética, cidadania e responsabilidade social, promovendo inclusão e empoderamento. Seu objetivo é formar cidadãos conscientes e preparados para os desafios atuais, contribuindo para uma sociedade mais justa e solidária.</p>
+                    <p>A Escola Estadual de Educação Profissional Irmã Ana Zélia da Fonseca oferece formação técnica de qualidade, focada nas demandas do mercado e no desenvolvimento de competências práticas, teóricas e sociais, como ética e cidadania. Promove inclusão social e empoderamento estudantil, formando cidadãos preparados para os desafios contemporâneos e comprometidos com uma sociedade mais justa.</p>
 
                     <img className={Styles.ImagemObjetivo} src={IMGOBJ} />
                 </div>
